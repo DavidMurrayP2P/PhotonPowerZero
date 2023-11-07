@@ -107,6 +107,12 @@ bool is_Pi_Booted() {
         }
     }
 
+bool has_Pi_ever_entered_expert_mode() {
+    if (PINA & (1 << ALIVE_PIN_1 )) { //Has it been pulled high?
+        return true;  // PA2 is high
+        }
+    }
+
 bool is_Pi_ready_for_data() {
     if (PINA & (1 << ALIVE_PIN_2 )) { //Has it been pulled high?
         return true; //PA4 is high
@@ -255,27 +261,35 @@ int main( void ) {
   uint16_t battery_voltage;
   uint8_t shifted_voltage;
   Blink_LEDs();
+  bool expert_mode = false;
   
   while(1) {
 
     battery_voltage = get_voltage_from_adc();
     if (is_Pi_Power_On()) {
-        if (is_Pi_Booted()) {
-            if (is_Pi_ready_for_data()) {
-                PORTA |= (1 << ACTIVE);
-                shifted_voltage = BitShiftVoltage(battery_voltage);
-                BitBang(shifted_voltage);
-                _delay_ms(100);
+        expert_mode = has_Pi_ever_entered_expert_mode();
+        if (expert_mode == true) {
+            if (is_Pi_Booted()) {
+                if (is_Pi_ready_for_data()) {
+                    PORTA |= (1 << ACTIVE);
+                    shifted_voltage = BitShiftVoltage(battery_voltage);
+                    BitBang(shifted_voltage);
+                    _delay_ms(100);
+                    }
+                else {
+                    PORTA &= ~(1 << ACTIVE); // set the LED to low
+                    }
                 }
-            else {
-                PORTA &= ~(1 << ACTIVE); // set the LED to low
+             else {
+                graceful_shutdown();
+                turn_off_pi(); 
+                Blink_LEDs();
                 }
+            
             }
-        else {
-            graceful_shutdown();
-            turn_off_pi(); 
-            Blink_LEDs();
-            }
+            else { 
+                // We are not in expert mode
+                }
         }
     else { // The Pi must be off
         if (battery_voltage > 375) {
@@ -289,5 +303,5 @@ int main( void ) {
             //Do nothing
             }
         }
-  }
+    }
 }

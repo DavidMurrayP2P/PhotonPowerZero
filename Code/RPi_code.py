@@ -54,7 +54,7 @@ def tweet_message(event):
 
     print ("Taking photo")
     #os.system('raspistill -o /home/pi/camera/cam.jpg')
-    os.system('libcamera-still -o /home/ph0tons/camera/cam.jpg')
+    os.system('libcamera-still -o /home/pi/camera/cam.jpg')
     image = open("/home/ph0tons/camera/cam.jpg", 'rb')
     response = twitter.upload_media(media=image)
     media_id = [response['media_id']]
