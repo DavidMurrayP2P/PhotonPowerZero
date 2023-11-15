@@ -6,7 +6,6 @@ import datetime
 import sys
 import time
 import subprocess
-from twython import Twython
 
 # Configure the GPIO pins for data transfer
 ALIVE_PIN1 = 16
@@ -21,19 +20,9 @@ shutdown_end_hour = 6
 
 GPIO.setwarnings(False)
 
-from twitter_auth import (
-    consumer_key,
-    consumer_secret,
-    access_token,
-    access_token_secret
-)
-
-twitter = Twython(
-    consumer_key,
-    consumer_secret,
-    access_token,
-    access_token_secret
-)
+def get_unix_time_as_string():
+    unix_time = int(time.time())
+    return str(unix_time)
 
 def get_uptime():
     with open('/proc/uptime', 'r') as f:
@@ -48,26 +37,24 @@ def get_temp():
     print("The Pi Temp: " + str(temp) + " C")
     return temp
 
-def tweet_message(event):
+def send_data(event):
     message = (str(dev_id) + " " + str(event) + "\n" + "Uptime: " + str(uptime) + " hours\n" + "Batt: " + str(battery_voltage) + "V \n" + "Temp: " + str(temp) + " degrees")
     print(message)
 
     print ("Taking photo")
-    #os.system('raspistill -o /home/pi/camera/cam.jpg')
-    os.system('libcamera-still -o /home/pi/camera/cam.jpg')
-    image = open("/home/ph0tons/camera/cam.jpg", 'rb')
-    response = twitter.upload_media(media=image)
-    media_id = [response['media_id']]
-    twitter.update_status(status=message, media_ids=media_id)
-    print("Tweeted: %s" % message)
+    os.system('rm /home/pi/camera/*')
+    string = ("raspistill -o /home/pi/camera/" + unix_time_string + ".jpg")
+    os.system(string)
+    string = ("scp /home/pi/camera/" + unix_time_string + ".jpg ph0tons@wiki.packets2photons.com:/var/www/html/node2imgs/")
+    os.system(string)
 
 def set_pin_state():
     GPIO.setmode(GPIO.BCM)
-    
+
     GPIO.setup(START_PIN, GPIO.IN)
     GPIO.setup(DATA_PIN, GPIO.IN)
     GPIO.setup(CLOCK_PIN, GPIO.IN)
-    
+
     GPIO.setup(ALIVE_PIN1, GPIO.OUT)
     GPIO.output(ALIVE_PIN1, 1)
     GPIO.setup(ALIVE_PIN2, GPIO.OUT)
@@ -80,7 +67,7 @@ def shutdown_pin_state():
 def check_internet_connection(hosts=["8.8.8.8", "1.1.1.1", "192.0.43.10"]):
     for host in hosts:
         try:
-            result = subprocess.run(["ping", "-c", "1", "-W", "1", host], stdout=subprocess.DEVNULL, 
+            result = subprocess.run(["ping", "-c", "1", "-W", "1", host], stdout=subprocess.DEVNULL,
 stderr=subprocess.DEVNULL)
             if result.returncode == 0:
                 return True
@@ -126,15 +113,15 @@ def is_battery_voltage_stable(voltage_list):
     half = len(voltage_list) // 2
     first_half = voltage_list[:half]
     second_half = voltage_list[half:]
-        
+
     first_half_average = sum(first_half) / len(first_half)
     second_half_average = sum(second_half) / len(second_half)
     print("The average of the first half is: " + str(first_half_average))
     print("The average of the second half is: " + str(second_half_average))
- 
+
     if (first_half_average <= second_half_average):
         return True
-    else: 
+    else:
         return False
 
 set_pin_state()
@@ -150,12 +137,14 @@ else:
 	print("Internet connection not working")
 
 while True:
-    
+
     try:
         now = datetime.datetime.now()
         dev_id = os.uname()[1]
         uptime = get_uptime()
         temp = get_temp()
+        unix_time_string = get_unix_time_as_string()
+        print(unix_time_string)
         battery_voltage = get_average_battery_voltage()
         voltage_list.append(battery_voltage)
         print(str(battery_voltage) + "V")
@@ -165,18 +154,18 @@ while True:
 
         if shutdown_start_hour <= now.hour and now.hour < shutdown_end_hour: #modified to and to never shutdown
             event = " Night time shutdown...  "
-            tweet_message(event)
+            send_data(event)
             print("Shutdown the Raspberry Pi")
             shutdown_pin_state()
             os.system("sudo shutdown now")
 
         elif (float(temp) > 60):
             event = " Temperature shutdown...  "
-            tweet_message(event)
+            send_data(event)
             # Shutdown the Raspberry Pi
             shutdown_pin_state()
             os.system("sudo shutdown now")
-    
+
         elif (float(battery_voltage) < 3.5):
             print("Low Battery Voltage Detected, getting results in 5 seconds")
             time.sleep(5)
@@ -184,7 +173,7 @@ while True:
             if (float(battery_voltage) < 3.45):
                 event = " Low Battery Voltage Shutdown...  "
                 time.sleep(2)
-                tweet_message(event)
+                send_data(event)
                 shutdown_pin_state()
                 os.system("sudo shutdown now")
             else:
@@ -193,33 +182,31 @@ while True:
         elif (now.minute == 27):
             if (float(battery_voltage) > 3.8):
                 event = "Normal Vbatt High"
-                tweet_message(event)
+                send_data(event)
 
             elif ((len(voltage_list)) > 5):
                 V_batt_trend = is_battery_voltage_stable(voltage_list)
                 if (V_batt_trend == True):
                     event = "Normal VBatt stable"
-                    tweet_message(event)
+                    send_data(event)
                 else:
                     event = "Normal VBatt falling shutting down"
-                    tweet_message(event)
+                    send_data(event)
                     shutdown_pin_state()
                     os.system("sudo shutdown now")
-    
+
             else:
                 event = "Normal, VBatt trend pending"
-                tweet_message(event)
+                send_data(event)
             voltage_list =[]
 
         elif (first_boot == True):
             event = " Starting up "
-            tweet_message(event)
-            print("Initial Tweet")
-            first_boot = False 
+            send_data(event)
+            print("Bootup data send")
+            first_boot = False
 
         time.sleep(57)
-        
-    except:
-        #twitter.update_status(status=message)
-        print("An error with twython")
 
+    except:
+        print("An error... "
