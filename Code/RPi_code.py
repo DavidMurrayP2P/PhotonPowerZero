@@ -42,10 +42,11 @@ def send_data(event):
     print(message)
 
     print ("Taking photo")
-    os.system('rm /home/pi/camera/*')
-    string = ("raspistill -o /home/pi/camera/" + unix_time_string + ".jpg")
+    os.system('rm /home/ph0tons/camera/*')
+    string = ("libcamera-still -o /home/ph0tons/camera/" + unix_time_string + ".jpg")
     os.system(string)
-    string = ("scp /home/pi/camera/" + unix_time_string + ".jpg ph0tons@wiki.packets2photons.com:/var/www/html/node2imgs/")
+    #image = open("/home/ph0tons/camera/cam.jpg", 'rb')
+    string = ("scp /home/ph0tons/camera/" + unix_time_string + ".jpg wiki.packets2photons.com:/var/www/html/node1imgs/")
     os.system(string)
 
 def set_pin_state():
@@ -209,4 +210,4 @@ while True:
         time.sleep(57)
 
     except:
-        print("An error... "
+        print("An error... ")
