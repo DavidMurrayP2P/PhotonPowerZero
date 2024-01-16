@@ -31,3 +31,5 @@ Image 3
 These must be single cell 3.7V Lipo batteries. I have had success with 4400mAH as a capacity. You musto only buy from a trusted supplier. Adafruit, Core Electronics. DO NOT buy LiPo from ebay or ali express vendors.
  - https://www.adafruit.com/product/354
  - https://core-electronics.com.au/polymer-lithium-ion-battery-4400mah.html
+
+Many vendors may reverse the polarity of their LiPo Batteries. Do not take any risks or shortcuts here.
