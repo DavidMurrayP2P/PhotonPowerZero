@@ -11,7 +11,7 @@ Image
  - Red 0603 LEDs	2	https://www.digikey.com.au/en/products/detail/liteon/LTST-C191KRKT/386837
  - Green 0603 LEDs	2	https://www.digikey.com.au/en/products/detail/rohm-semiconductor/SML-D12M8WT86/1641797
  - 100uf 1210	2	https://www.digikey.com.au/en/products/detail/samsung-electro-mechanics/CL31A107MQHNNNE/3887440
- - 2.2 µH Shielded Inductor 2.5 A 90mOhm Max 1210	1	https://www.digikey.com.au/en/products/detail/delta-electronics-cyntec/HMLE32251B-2R2MS/9761439?s=N4IgTCBcDa4AwGYDsBaAEgWQDIFEFjAFYBGAIRTACUwMBlAYQBUUA5AERAF0BfIA
+ - 2.2 µH Shielded Inductor 2.5 A 90mOhm Max 1210	1	https://www.digikey.com.au/en/products/detail/delta-electronics-cyntec/HMLE32251B-2R2MS/9761439
  - ATtiny84-SSFR	1	https://www.digikey.com.au/en/products/detail/microchip-technology/ATTINY84A-SSFR/3789533
  - AP2161-WG	1	https://www.digikey.com.au/en/products/detail/diodes-incorporated/AP2161WG-7/1964659?s=N4IgTCBcDaIIIAUwEYBsyDqBxEBdAvkA
  - Diode 60 V 2A Surface Mount SOD-123F	1	https://www.digikey.com.au/en/products/detail/smc-diode-solutions/SK34A/6023036?
