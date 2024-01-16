@@ -13,8 +13,8 @@ Image
  - 100uf 1210	2	https://www.digikey.com.au/en/products/detail/samsung-electro-mechanics/CL31A107MQHNNNE/3887440
  - 2.2 µH Shielded Inductor 2.5 A 90mOhm Max 1210	1	https://www.digikey.com.au/en/products/detail/delta-electronics-cyntec/HMLE32251B-2R2MS/9761439
  - ATtiny84-SSFR	1	https://www.digikey.com.au/en/products/detail/microchip-technology/ATTINY84A-SSFR/3789533
- - AP2161-WG	1	https://www.digikey.com.au/en/products/detail/diodes-incorporated/AP2161WG-7/1964659?s=N4IgTCBcDaIIIAUwEYBsyDqBxEBdAvkA
- - Diode 60 V 2A Surface Mount SOD-123F	1	https://www.digikey.com.au/en/products/detail/smc-diode-solutions/SK34A/6023036?
+ - AP2161-WG	1	https://www.digikey.com.au/en/products/detail/diodes-incorporated/AP2161WG-7/1964659
+ - Diode 60 V 2A Surface Mount SOD-123F	1	https://www.digikey.com.au/en/products/detail/smc-diode-solutions/SK34A/6023036
  - REG_MCP1700T-3602E/MB	1	https://www.digikey.com.au/en/products/detail/microchip-technology/MCP1700T-3002E%2FMB/3622376
  - bq2407	1	https://www.digikey.com.au/en/products/detail/texas-instruments/BQ24074RGTR/2047269
  - TPS613222A	1	https://www.digikey.com.au/en/products/detail/texas-instruments/TPS613222ADBVT/9371270
