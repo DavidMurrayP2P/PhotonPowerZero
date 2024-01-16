@@ -1,12 +1,25 @@
-# P2P
+# Photon Power Zero 3D Prints 
 
-The following is where I am storing my code and files for my hardware based projects.
+## To use as an Indoor UPS
+Print xyz in any filament
+4x M2.5 heat set inserts like https://www.aliexpress.com/item/1005004535859664.html
+M2.5 Mounting hardware https://www.aliexpress.com/item/1005004275784627.html
+image1
 
+
+image 2
+
+## To Put into the enclosure or to use as
 For the UPS or Case mount
 Print in ABS, ASA or better for any outdoor use
 4x M2.5 heat set inserts like https://www.aliexpress.com/item/1005004535859664.html
+M2.5 Mounting hardware https://www.aliexpress.com/item/1005004275784627.html
 
-For the Pannel mount
+## Mounting to the Solar Panel
+Image 3
+
+
+For the solar Pannel mount
 Print in ABS, ASA or better
 6 x M3 heat set inserts OD 5mm Length 10mm https://www.aliexpress.com/item/1005004535859664.html
-6 x M5 5Xmm Staintelss steel hex bolt
+6 x M5 50mm Staintelss steel hex bolt https://www.thefastenerfactory.com.au/stainless-steel-hex-socket-head-cap-screw-m3-x-50mm-100pc
