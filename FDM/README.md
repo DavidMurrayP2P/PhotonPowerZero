@@ -1,7 +1,7 @@
 # Photon Power Zero 3D Prints 
 
 ## Indoor UPS
- - Print xyz in any filament as it will not be exposed to heat
+Print UPS_mount in any filament as it will not be exposed to heat
  - 4x M2.5 heat set inserts like https://www.aliexpress.com/item/1005004535859664.html
  - M2.5 Mounting hardware https://www.aliexpress.com/item/1005004275784627.html
  - USB to barrel Jack cable: https://www.aliexpress.com/item/1005003706471183.html
@@ -12,7 +12,7 @@ image1
 ## Outdoor Solar Node
 
 ### Enclosure
-Print xyz in ABS, ASA or better for any outdoor use
+Print case_mount in ABS, ASA or better for any outdoor use
 4x M2.5 heat set inserts like https://www.aliexpress.com/item/1005004535859664.html
 M2.5 Mounting hardware https://www.aliexpress.com/item/1005004275784627.html
 Aluminium Enclosure https://www.jaycar.com.au/aluminium-enclosure-with-clear-ends/p/HB6294
