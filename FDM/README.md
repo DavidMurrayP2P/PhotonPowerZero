@@ -13,9 +13,10 @@ image1
 
 ### Enclosure
 Print case_mount in ABS, ASA or better for any outdoor use
-4x M2.5 heat set inserts like https://www.aliexpress.com/item/1005004535859664.html
-M2.5 Mounting hardware https://www.aliexpress.com/item/1005004275784627.html
-Aluminium Enclosure https://www.jaycar.com.au/aluminium-enclosure-with-clear-ends/p/HB6294
+
+ - 4x M2.5 heat set inserts like https://www.aliexpress.com/item/1005004535859664.html
+ - M2.5 Mounting hardware https://www.aliexpress.com/item/1005004275784627.html
+ - Aluminium Enclosure https://www.jaycar.com.au/aluminium-enclosure-with-clear-ends/p/HB6294
 
 ### Solar Panel and Mount
 Image 3
