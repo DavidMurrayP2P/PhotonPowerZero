@@ -147,7 +147,7 @@ while True:
         #print(voltage_list)
         if ((len(voltage_list)) > 5):
             Vbatt_stability = is_battery_voltage_stable(voltage_list)
-        print("VBatt trending up")
+        print(str(battery_voltage) + "V")
 
         if shutdown_start_hour <= now.hour and now.hour < shutdown_end_hour: # this is legacy code, it should not shut down ever
             event = " Night time shutdown...  "
