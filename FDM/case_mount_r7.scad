@@ -2,14 +2,14 @@ union () {
 difference(){
 union(){
 translate([-3,0,2.4])cube([98,97,7], center=true);    
-translate([-13,-2,19.5])cube([78,78,31], center=true); 
+translate([-13,-2,19.5])cube([78,79,31], center=true); 
 translate([-23.5,-6.5,19.5])cube([8,69,31], center=true);
 }
     //Cube LiPo Battery Core Electronics style
     translate([-35,-6.5,20])cube([26,52,37], center=true);
 
     //Dual cylinder lipo Adafruit style
-    translate([-37,0,20])cube([19,69,37], center=true);
+    translate([-37,0,20])cube([19,68,37], center=true);
 
      
     //Outside rail mounts
@@ -37,13 +37,13 @@ translate([-23.5,-6.5,19.5])cube([8,69,31], center=true);
     
      //battery cable routing
     translate([-37,-37,27])  cube([7,10,20], center=true);
-    translate([-52,-35.7,13]) rotate([13,0,0])  cube([7,4.5,19], center=true);
+    translate([-52,-35.3,13]) rotate([13,0,0])  cube([7,4.5,21], center=true);
     translate([-36,-32,0])  cube([10,1.8,6], center=true);
     translate([-25.5,-32,0])  cube([10,1.8,6], center=true);
     translate([-46.5,-32,0])  cube([10,1.8,6], center=true);
 
     //translate([-46.5,-37.5,20.7])rotate([0,90,0])   cylinder(h=12.05, r1=3.75, r2=3.75, center=true,$fn=24);
-    translate([-46,-39.5,29])  cube([20,10.5,24], center=true);
+    translate([-46,-39.5,29])  cube([20,11.1,24], center=true);
    
     translate([-35,-33,2.3])rotate([0,90,0])   cylinder(h=35, r1=2.5, r2=2.5, center=true,$fn=24);
 
