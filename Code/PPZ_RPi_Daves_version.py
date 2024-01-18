@@ -41,7 +41,13 @@ def send_data(event):
     message = (str(dev_id) + " " + str(event) + "\n" + "Uptime: " + str(uptime) + " hours\n" + "Batt: " + str(battery_voltage) + "V \n" + "Temp: " + str(temp) + " degrees")
     print(message)
 
-    print("This is where a user can implement interesting stuff")
+    print ("Taking photo")
+    os.system('rm /home/ph0tons/camera/*')
+    string = ("libcamera-still -o /home/ph0tons/camera/" + unix_time_string + ".jpg")
+    os.system(string)
+    #image = open("/home/ph0tons/camera/cam.jpg", 'rb')
+    string = ("scp /home/ph0tons/camera/" + unix_time_string + ".jpg wiki.packets2photons.com:/var/www/html/node1imgs/")
+    os.system(string)
 
 def set_pin_state():
     GPIO.setmode(GPIO.BCM)
@@ -147,14 +153,14 @@ while True:
         if ((len(voltage_list)) > 5):
             Vbatt_stability = is_battery_voltage_stable(voltage_list)
 
-        if shutdown_start_hour <= now.hour and now.hour < shutdown_end_hour: # this is legacy code, it should not shut down ever
+        if shutdown_start_hour <= now.hour and now.hour < shutdown_end_hour: #modified to and to never shutdown
             event = " Night time shutdown...  "
             send_data(event)
             print("Shutdown the Raspberry Pi")
             shutdown_pin_state()
             os.system("sudo shutdown now")
 
-        elif (float(temp) > 75):
+        elif (float(temp) > 60):
             event = " Temperature shutdown...  "
             send_data(event)
             # Shutdown the Raspberry Pi
