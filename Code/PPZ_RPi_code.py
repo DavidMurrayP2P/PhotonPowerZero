@@ -34,7 +34,7 @@ def get_uptime():
 def get_temp():
     temp = os.popen('vcgencmd measure_temp').readline()
     temp= temp.replace("temp=","").replace("'C\n","")
-    print("The Pi Temp: " + str(temp) + " C")
+    print("Pi Temp: " + str(temp) + " C")
     return temp
 
 def send_data(event):
@@ -111,12 +111,14 @@ def is_battery_voltage_stable(voltage_list):
 
     first_half_average = sum(first_half) / len(first_half)
     second_half_average = sum(second_half) / len(second_half)
-    print("The average of the first half is: " + str(first_half_average))
-    print("The average of the second half is: " + str(second_half_average))
+    #print("The average of the first half is: " + str(first_half_average))
+    #print("The average of the second half is: " + str(second_half_average))
 
     if (first_half_average <= second_half_average):
+        print("VBatt trending up")
         return True
     else:
+        print("VBatt trending down")
         return False
 
 set_pin_state()
@@ -139,13 +141,13 @@ while True:
         uptime = get_uptime()
         temp = get_temp()
         unix_time_string = get_unix_time_as_string()
-        print(unix_time_string)
+        #print(unix_time_string)
         battery_voltage = get_average_battery_voltage()
         voltage_list.append(battery_voltage)
-        print(str(battery_voltage) + "V")
-        print(voltage_list)
+        #print(voltage_list)
         if ((len(voltage_list)) > 5):
             Vbatt_stability = is_battery_voltage_stable(voltage_list)
+        print("VBatt trending up")
 
         if shutdown_start_hour <= now.hour and now.hour < shutdown_end_hour: # this is legacy code, it should not shut down ever
             event = " Night time shutdown...  "
