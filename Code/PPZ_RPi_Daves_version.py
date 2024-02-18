@@ -24,6 +24,10 @@ def get_unix_time_as_string():
     unix_time = int(time.time())
     return str(unix_time)
 
+def current_system_time():
+    now = datetime.datetime.now()
+    return now
+
 def get_uptime():
     with open('/proc/uptime', 'r') as f:
         uptime_seconds = float(f.readline().split()[0])
@@ -38,15 +42,23 @@ def get_temp():
     return temp
 
 def send_data(event):
-    message = (str(dev_id) + " " + str(event) + "\n" + "Uptime: " + str(uptime) + " hours\n" + "Batt: " + str(battery_voltage) + "V \n" + "Temp: " + str(temp) + " degrees")
+    img_location = "/home/ph0tons/img/"
+    data_location = "/home/ph0tons/data/data.txt"
+    time_now = current_system_time()
+
+    message = (str(dev_id) + " " + str(event) + "\n" + "Uptime: " + str(uptime) + " hours\n" + "Batt: " + str(battery_voltage) + "V \n" + "Temp: " + str(temp) + " degrees" + "\nTime: " + str(time_now))
     print(message)
+    with open(data_location, 'w') as file:
+        file.write(message)
 
     print ("Taking photo")
-    os.system('rm /home/ph0tons/camera/*')
-    string = ("libcamera-still -o /home/ph0tons/camera/" + unix_time_string + ".jpg")
+    os.system("rm " + str(img_location) + "*")
+    string = ("libcamera-still -o " +str(img_location) + str(unix_time_string) + ".jpg")
+    #string = ("raspistill -o " + str(img_location) + str(unix_time_string) + ".jpg")
     os.system(string)
-    #image = open("/home/ph0tons/camera/cam.jpg", 'rb')
-    string = ("scp /home/ph0tons/camera/" + unix_time_string + ".jpg wiki.packets2photons.com:/var/www/html/node1imgs/")
+    string = ("scp " + str(img_location) + str(unix_time_string) + ".jpg ph0tons@wiki.packets2photons.com:/var/www/html/imgs/" + str(dev_id) + "/")
+    os.system(string)
+    string = ("scp " + str(data_location) + " ph0tons@wiki.packets2photons.com:/var/www/html/data/" + str(dev_id) + "/" + str(unix_time_string) + ".txt")
     os.system(string)
 
 def set_pin_state():

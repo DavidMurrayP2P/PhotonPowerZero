@@ -102,9 +102,9 @@ def get_average_battery_voltage():
 
 def is_battery_voltage_stable(voltage_list):
 
-    print("sum of voltages in list is: " + str(sum(voltage_list)))
+    #print("sum of voltages in list is: " + str(sum(voltage_list)))
     average = sum(voltage_list) / len(voltage_list)
-    print("The avg: " + str(average))
+    print("Vbatt avg: " + str(average))
     half = len(voltage_list) // 2
     first_half = voltage_list[:half]
     second_half = voltage_list[half:]
