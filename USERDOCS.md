@@ -14,13 +14,13 @@ Note that in the image above the Pi is just being powerd via a regular USB cable
 
 Install required packages
 
-sudo apt install python3 tmux neofetch libcamera-apps python3-pip
+'sudo apt install python3 tmux neofetch libcamera-apps python3-pip'
 
 To implement safe shutdown
 
 Currently, we pull the Shutdown pin high on the raspberry Pi with:
 
-sudo vim /boot/config.txt
+'sudo vim /boot/config.txt'
 
 Then we insert the following line at the end of the file:
 
