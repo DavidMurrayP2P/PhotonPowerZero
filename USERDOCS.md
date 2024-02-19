@@ -16,11 +16,9 @@ Install required packages
 
 `sudo apt install python3 tmux neofetch libcamera-apps python3-pip`
 
-To implement safe shutdown
+Now make the changes such that if GPIO Pin 21 is pulled low, the Raspberry Pi will shutdown. This is how a shutdown in initiated from the Photon Power Zerot to the Raspberry pi. 
 
-Currently, we pull the Shutdown pin high on the raspberry Pi with:
-
-`sudo vim /boot/config.txt`
+`sudo nano /boot/config.txt`
 
 Then we insert the following line at the end of the file:
 
@@ -70,7 +68,10 @@ Turn off you Pi.
 
 Follow the video below: 
 
-[Video of someone installing the photon power zero]
+[Video of someone physically installing the photon power zero]
+https://youtu.be/dVccMCOYDCo
+[![Video Thumbnail](img/Installing_PPZ_thumb.png)]( https://youtu.be/dVccMCOYDCo "Physically Installing the Photon Powre Zero on the Raspberry Pi Zero")
+
 
 Note: Never power the Raspberry Pi 
 
