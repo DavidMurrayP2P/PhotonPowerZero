@@ -66,14 +66,11 @@ Turn off you Pi.
 
 ## Physically Install the Photon Power Zero on the Rasberry Pi
 
-Follow the video below: 
+The image below will take you to a youtube video showing you how to carefully install the Photon Power Zero.  
 
-[Video of someone physically installing the photon power zero]
-https://youtu.be/dVccMCOYDCo
 [![Video Thumbnail](img/Installing_PPZ_thumb.png)]( https://youtu.be/dVccMCOYDCo "Physically Installing the Photon Powre Zero on the Raspberry Pi Zero")
 
-
-Note: Never power the Raspberry Pi 
+Note: Never power the Raspberry Pi via the LiPo Battery and the USB port on the Raspberry Pi. **You cannot charge the battery from the 5v usb port on the Raspberry Pi.**
 
 Now you can plug in your battery first then your cable that will charge the battery over USB. If your battery is well charged your pi should start booting.
 
