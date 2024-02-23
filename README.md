@@ -11,6 +11,12 @@ You can find the userdocumentation, showing you how to get started with the the 
 ![Alt text](img/PhotonPowerZero.jpg?raw=true "Title")
 <p style="text-align:center; font-style:italic;">Photon Power Zero</p>
 
+The project is more than just the Photon Power Zero board. I want to create and share all of components to make it as easy as possible to deploy a Raspberry Pi Zero outdoors.
+
+[![Video Thumbnail](img/Outdoor_Node.png)]( https://www.youtube.com/watch?v=qGwqMnN81YI "Desrcibing the Project and some goals, while demontsrating some of the different aspects")
+
+
+
 ![Alt text](img/kit.jpg?raw=true "Title")`
 <p style="text-align:center; font-style:italic;">Production kit</p>
 
