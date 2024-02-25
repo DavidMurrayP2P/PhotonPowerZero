@@ -1,20 +1,25 @@
-# User Documentation of the  PhotonPowerZero
+# User Documentation of the  Photon Power Zero
 
 ## Before Installing the Photon Power Zero on the Pi ###
 
-Lets start by writing a Raspberry Power light image onto your SD Card. 
+Start by writing a Raspberry Power light image onto your SD Card. 
 
 [Insert SD card Flashing video here]
 
-After flashing your Rasberry Pi based on the insturctions above plug the power in, without the Photon Power Zero attached. 
+After flashing your Rasberry Pi using the insturctions above plug the power in, without the Photon Power Zero attached. 
 
-![Alt text](img/RPi.jpg?raw=true "Title")
+![Alt text](img/RPi.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">Start by Powering the Raspberry Pi through USB
 
-Note that in the image above the Pi is just being powerd via a regular USB cable while we set it up for the Photon Power Zero. You should be able to ssh into it.
+In the image above the Pi i being powerd via a regular USB cable while we set it up for the Photon Power Zero. 
+
+SSH into your Rasberry Pi with
+
+`ssh [username]@[IP_address_of_Raspberry_Pi]`
 
 Install required packages
 
-`sudo apt install python3 tmux neofetch libcamera-apps python3-pip`
+`sudo apt update`
+`sudo apt install python3 tmux libcamera-apps python3-pip`
 
 Now make the changes such that if GPIO Pin 21 is pulled low, the Raspberry Pi will shutdown. This is how a shutdown in initiated from the Photon Power Zerot to the Raspberry pi. 
 
