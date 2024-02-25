@@ -21,7 +21,7 @@ Install required packages
 `sudo apt update`
 `sudo apt install python3 tmux libcamera-apps python3-pip`
 
-Now make the changes such that if GPIO Pin 21 is pulled low, the Raspberry Pi will shutdown. This is how a shutdown in initiated from the Photon Power Zerot to the Raspberry pi. 
+Now we are going to allow a graceful shutdown if GPIO Pin 20 is pulled low, the Raspberry Pi will shutdown. This is how a shutdown in initiated from the Photon Power Zerot to the Raspberry pi. 
 
 `sudo nano /boot/config.txt`
 
@@ -57,7 +57,7 @@ Change the username pi to whatever your userlevel user is, save and exit.
 
 Now test by running:
 
-`sudo /etc/rc.local`
+`/usr/bin/PPZ_RPi_code.py`
 
 Wait 15 seconds then run:
 
@@ -67,7 +67,7 @@ You should have a message saying:
 
 Internet connection working
 
-Turn off you Pi.
+Turn off you Pi, by removing the USB Power. Now remove the usb cable from your desk, I want to prevent you ffrom powering your Pi through this again.
 
 ## Physically Install the Photon Power Zero on the Rasberry Pi
 
