@@ -6,18 +6,16 @@ You can find the user docs, showing you how to get started with the the Photon P
 * [USERDOCS](USERDOCS.md)
 * [DESIGN_DECISIONS](DESIGN_DECISIONS.md)
 
-![Alt text](img/PhotonPowerZero.jpg?raw=true "Title")
-<p style="text-align:center; font-style:italic;">Photon Power Zero</p>
+![Alt text](img/PhotonPowerZero.jpg?raw=true "Title") <p style="text-align:center; font-style:italic;">Photon Power Zero Board</p>
 
 The project is more than just the Photon Power Zero board. I want to create and share all of components to make it as easy as possible to deploy a Raspberry Pi Zero outdoors.
 
-[![Video Thumbnail](img/Outdoor_Node.png)]( https://www.youtube.com/watch?v=qGwqMnN81YI "Desrcibing the Project and some goals, while demontsrating some of the different aspects")
+[![Video Thumbnail](img/Outdoor_Node.png)]( https://www.youtube.com/watch?v=qGwqMnN81YI") <p style="text-align:center; font-style:italic;">Youtube Video describing the Project and the goals</p> 
 
 This is an open source project and so you can find the code for the Photon Power Zero and the Raspberry Pi, the kicad PCB files and the FDM 3D printing files below
 * [Code](Code)
 * [PCBs](PCBs)
 * [FDM (3D Print Files)](FDM.md)
 
-![Alt text](img/kit.jpg?raw=true "Title")`
-<p style="text-align:center; font-style:italic;">Production kit</p>
+![Alt text](img/kit.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">Production kit</p>
 
