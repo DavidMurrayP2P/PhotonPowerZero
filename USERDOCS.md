@@ -57,9 +57,9 @@ Change the username pi to whatever your userlevel user is, save and exit.
 
 Now test by running:
 
-`/usr/bin/PPZ_RPi_code.py`
+`sudo /etc/rc.local`
 
-Wait 15 seconds then run:
+The command line will appear to hang for 10 seconds before returning you to the terminal. When it does, run:
 
 `tmux attach`
 
