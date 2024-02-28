@@ -6,11 +6,11 @@ Start by writing a Raspberry Power light image onto your SD Card.
 
 [Insert SD card Flashing video here]
 
-After flashing your Rasberry Pi using the insturctions above plug the power in, without the Photon Power Zero attached. 
+After flashing your Rasberry Pi using the insturctions above, insert the SD card into your Raspberry Pi and plug the power in, without the Photon Power Zero attached. Note that the first time the Pi Zero boots after flashing the sd card it takes me before you can see the device on your LAN. Go get yourself a coffee and wait for it to appear. 
 
 ![Alt text](img/RPi.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">Start by Powering the Raspberry Pi through USB
 
-In the image above the Pi i being powerd via a regular USB cable while we set it up for the Photon Power Zero. 
+In the image above the Pi i being powerd via a regular USB cable while we set it up for the Photon Power Zero. Make sure you never simultaneously power it through the Photon Power Zero and the USB port at the same time. Now:
 
 SSH into your Rasberry Pi with
 
