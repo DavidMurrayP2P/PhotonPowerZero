@@ -17,5 +17,6 @@ This is an open source project and so you can find the code for the Photon Power
 * [PCBs](PCBs)
 * [FDM (3D Print Files)](FDM.md)
 
-![Production Kit](img/kit.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">Production kit</p>
+![Production Kit](img/kit.jpg?raw=true "Title")
+<p style="text-align:center; font-style:italic;">Production kit</p>
 
