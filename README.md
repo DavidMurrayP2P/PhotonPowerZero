@@ -21,3 +21,4 @@ This is an open source project and so you can find the code for the Photon Power
 ![Production Kit](img/kit.jpg?raw=true "Title")
 <p style="text-align:center; font-style:italic;">Production kit</p>
 
+Note that the Photon Power Zero does not come with a LiPo battery. You need to self source this and you should carefully read our [LIPO_PURCHASING](LIPO_PURCHASING.md) guide.
