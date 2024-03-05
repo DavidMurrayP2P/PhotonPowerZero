@@ -1,6 +1,6 @@
 # PhotonPowerZero
 
-Welcome to the github page of the Photon Power Zero. The goal of this project is to build an ecosystem of electronics, code and parts that make it as easy as possible to go from a Raspberry Pi Zero desk based proof of concept and then deploy this outdoors. 
+The goal of the Photon Power Zero project is to build an ecosystem of electronics, code, BoM and, 3D printable parts that make it as easy as possible to go from a Raspberry Pi Zero proof of concept, sitting on someones desk, to an outdoor deployment. 
 
 You can find the user docs, showing you how to get started with the the Photon Power Zero, and the design decisions, around the board here:
 * [USERDOCS](USERDOCS.md)
