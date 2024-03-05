@@ -1,6 +1,12 @@
-# Design Decisions
+# Design and Decisions
 
 This document describes the fundamental design decisions ofthe Photon Power Zero. This project started in late 2022 because I wanted to solar power a Raspberry Pi. The Raspberry Pi is not class leading in terms of power efficiency or power managment, but it is class leading in terms of software support of the operating system and avaliabilyt of compatible sensors. A HAT that sits on the top of the Raspberry Pi, and manges power, and makes solar charging possible addresses one of the Raspberry Pi's deficiencies.
+
+## Design
+
+You can review the schematic and the board layout but this section will provide a mile high overview of this project. This board is designed arnoud the BQBQ2407 chip. This handles the 5-9v input from USB or a solar panel. It will prioritise powering the ATtiny84 microcontroller that is the brains of the board. The ATtiny84 is clocked down to 1MHz and consumes little power. This ATtiny84 monitors the LiPo battery voltage through a voltage divider on an ADC pin. When the power level of the battery is high enough, it will pull the enable pin on the AP2161-WG, a high side switch, low. When this switch is pulled low, it will power a 5v DC Boost circuit TPS613222A to power the Raspberry Pi at 5V. 
+
+The ATtiny84 is connected to pins on the Raspberry Pi Zero. It tries to use pins not commonly used by other Pi HATs. One pin is used to flag that the Raspberry Pi should gracefully shut down. Other pins are used to bit bang a battery voltage through to the Raspberry Pi. You can read the C code used on the ATtiny to get a better understanding of when the Raspberry Pi will switch on and off. 
 
 ## Does it work for the Raspberry Pi 3/4/5 or Jetson
 
