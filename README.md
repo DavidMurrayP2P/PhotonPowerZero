@@ -4,7 +4,7 @@ Welcome to the github page of the Photon Power Zero. The goal of this project is
 
 You can find the user docs, showing you how to get started with the the Photon Power Zero, and the design decisions, around the board here:
 * [USERDOCS](USERDOCS.md)
-* [DESIGN_DECISIONS](DESIGN_DECISIONS.md)
+* [DESIGN_AND_DECISIONS](DESIGN_AND_DECISIONS.md)
 * [LIPO_PURCHASING](LIPO_PURCHASING.md)
 
 ![Alt text](img/PhotonPowerZero.jpg?raw=true "Title") <p style="text-align:center; font-style:italic;">Photon Power Zero Board</p>
