@@ -2,9 +2,11 @@
 
 ## Before Installing the Photon Power Zero on the Pi ###
 
-Start by writing a Raspberry Power light image onto your SD Card. 
+Start by writing a light image of PiOS onto your SD card. The following video steps you through this as well as getting the settings right to be able to ssh into your Raspberry Pi without ever plugging a screen in. 
 
-[Insert SD card Flashing video here]
+
+[![Video Thumbnail](img/SD_card_install.png)]( https://youtu.be/duxeGzRcJmE "Physically Installing the Photon Powre Zero on the Raspberry Pi Zero")
+
 
 After flashing your Rasberry Pi using the insturctions above, insert the SD card into your Raspberry Pi and plug the power in, without the Photon Power Zero attached. Note that the first time the Pi Zero boots after flashing the sd card it takes me before you can see the device on your LAN. Go get yourself a coffee and wait for it to appear. 
 
