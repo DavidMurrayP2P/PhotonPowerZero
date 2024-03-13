@@ -5,6 +5,9 @@ A single cell 3.7V LiPo battery must be sourced and this should be done carefull
 You must only buy from a trusted supplier. Adafruit, Core Electronics. DO NOT buy LiPo from ebay or ali express vendors.
  - https://www.adafruit.com/product/354
  - https://core-electronics.com.au/polymer-lithium-ion-battery-4400mah.html
+ - https://shop.pimoroni.com/products/lithium-ion-battery-pack?variant=23417820423
+ - https://littlebirdelectronics.com.au/products/lithium-ion-battery-pack-3-7v-4400mah
+ - https://www.digikey.com/en/products/detail/adafruit-industries-llc/354/5054541
 
 Many vendors may reverse the polarity of their LiPo Batteries. Do not take any risks or shortcuts here.
 
