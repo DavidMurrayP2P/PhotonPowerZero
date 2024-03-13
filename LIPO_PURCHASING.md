@@ -2,7 +2,7 @@
 
 A single cell 3.7V LiPo battery must be sourced and this should be done carefully. I have had success with 4400mAH as a capacity for the Raspberry Pi Zero. 
 
-You must only buy from a trusted supplier. Adafruit, Core Electronics. DO NOT buy LiPo from ebay or ali express vendors.
+You must only buy from a trusted supplier such as Adafruit, Core Electronics, Little Bird, Pimoroni. DO NOT buy LiPo from ebay or ali express vendors.
  - https://www.adafruit.com/product/354
  - https://core-electronics.com.au/polymer-lithium-ion-battery-4400mah.html
  - https://shop.pimoroni.com/products/lithium-ion-battery-pack?variant=23417820423
