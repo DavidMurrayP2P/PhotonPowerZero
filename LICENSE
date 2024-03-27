@@ -1,6 +1,5 @@
 CERN Open Hardware Licence Version 2 - Strongly Reciprocal
 
-
 Preamble
 
 CERN has developed this licence to promote collaboration among
