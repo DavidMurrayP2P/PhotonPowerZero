@@ -1,6 +1,6 @@
 # Design and Decisions
 
-This document describes the fundamental design decisions of the Photon Power Zero. This project started in late 2022 because I wanted to solar power a Raspberry Pi. The Raspberry Pi is not class-leading in terms of efficiency or power management. Still, it is class-leading in software support for the operating system and the availability of compatible sensors. The Photon Power Zero is a Raspberry Pi Zero HAT that slides over the top of the Raspberry Pi, manages power, and makes solar charging possible, addressing one of the Raspberry Pi's deficiencies.
+This document describes the fundamental design decisions of the Photon Power Zero. This project started in late 2022 because I wanted to solar power a Raspberry Pi. The Raspberry Pi is not class-leading in terms of efficiency or power management, but it is still the best supported Single Board Computer (SBC) with the widest availability of compatible sensors. The Photon Power Zero is a Raspberry Pi Zero HAT that slides over the top of the Raspberry Pi, manages power, and makes solar charging possible, and  addresses, in my opinion, one of the Raspberry Pi's biggest deficiencies; power management.
 
 ## Design
 

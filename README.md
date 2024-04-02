@@ -23,4 +23,4 @@ As an open-source project, you can find the code for the Photon Power Zero and t
 
 Note that the Photon Power Zero does not come with a LiPo battery. You need to self-source your battery and carefully read our [LIPO_PURCHASING](LIPO_PURCHASING.md) guide.
 
-We have tested the solar panels from [Voltaic Systems](https://voltaicsystems.com/). We used the 6-watt 6-volt panels during testing, but the 9-10-watt panels they sell will also work well.
+We have tested the solar panels from [Voltaic Systems](https://voltaicsystems.com/). We used the 6-watt 6-volt panels during testing, but the 9-10-watt panels they sell should work even better.
