@@ -18,7 +18,7 @@ SSH into your Rasberry Pi with
 
 `ssh [username]@[IP_address_of_Raspberry_Pi]`
 
-Install required packages
+Install required packages with:
 
 `sudo apt update`
 
@@ -48,7 +48,7 @@ You can then move the file to /usr/bin
 
 Now you can edit:
 
-`nano /etc/rc.local`
+`sudo nano /etc/rc.local`
 
 Add the following before exit 0
 
