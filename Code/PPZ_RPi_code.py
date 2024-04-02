@@ -41,7 +41,10 @@ def send_data(event):
     message = (str(dev_id) + " " + str(event) + "\n" + "Uptime: " + str(uptime) + " hours\n" + "Batt: " + str(battery_voltage) + "V \n" + "Temp: " + str(temp) + " degrees")
     print(message)
 
-    print("This is where a user can implement interesting stuff")
+    print("This is where a user can implement interesting stuff.")
+    print("You can write Python code or you can uncomment the example executing a binary below.")
+    os.system("ls")
+    #Please check out the github repo for more examples
 
 def set_pin_state():
     GPIO.setmode(GPIO.BCM)
@@ -200,7 +203,6 @@ while True:
         elif (first_boot == True):
             event = " Starting up "
             send_data(event)
-            print("Bootup data send")
             first_boot = False
 
         time.sleep(57)

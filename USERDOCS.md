@@ -76,7 +76,7 @@ Internet connection working
 
 Turn off your Pi by removing the USB Power. Now remove the USB cable from your desk; I want to prevent you from powering your Pi through this again. You must NEVER power your Raspberry Pi through that USB port while the Photon Power Zero board is attached.
 
-## Physically Install the Photon Power Zero on the Rasberry Pi
+## Physically Install the Photon Power Zero on the Rasberry Pi Zero
 
 The image below will take you to a YouTube video showing you how to carefully install the Photon Power Zero.
 
@@ -95,7 +95,7 @@ You should see the output of the Python program that you have run. You should be
 
 ## Troubleshooting ##
 
-If you cannot set up the Wifi and enable SSH from the image creation stage, you can choose to plug in an HDMI connector, connect to your Wifi, and install the open SSH server via the command line with:
+If you cannot set up the Wifi and enable SSH from the image creation stage, you can choose to plug in a HDMI connector, connect to your Wifi, and install the open SSH server via the command line with:
 
 ```
 sudo apt update
