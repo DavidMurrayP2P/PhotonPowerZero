@@ -58,7 +58,9 @@ su -l pi -c "tmux new -s monitor -d"
 su -l pi -c "tmux send-keys -t monitor '/usr/bin/PPZ_RPi_code.py' C-m"
 ```
 
-Change the username pi to whatever your userlevel user is, save and exit.
+Change the username pi to whatever your userlevel user is, save and exit. As an example, I called my raspberry pi user david and therefore my /etc/rc.local file looked similar to below: 
+
+![Alt text](img/rclocal.png?raw=true "Title")<p style="text-align:center; font-style:italic;">The /etc/rc.local file
 
 Now test by running:
 
