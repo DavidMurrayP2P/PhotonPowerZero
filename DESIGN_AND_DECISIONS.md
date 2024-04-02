@@ -10,7 +10,7 @@ The ATtiny84 is connected to pins on the Raspberry Pi Zero that are rarely used 
 
 ## Does it work for the Raspberry Pi 3/4/5 or Jetson
 
-These platforms use a lot more power and would require a bigger battery, solar panel and likely a board redesign. Even good quality 2-pin LiPo Batteries often come with wires that only support 1 Amp. This will be a limiting factor on both the charge rate and the current draw when being used. The design required to support the 2-5 Amps needed for these more powerful boards.
+These platforms use a lot more power and would require a bigger battery, solar panel and likely a board redesign. Even good quality 2-pin LiPo Batteries often come with wires that only support 1 Amp. This will be a limiting factor on both the charge rate and the current draw when being used. A completely different design would be required to support the 2-5 Amps needed for these more powerful boards.
 
 There is also the problem of heat. Both electronics and batteries perform much better when cool. Subjecting them to outdoor temperatures is challenging. If your panels are going to work, they need to be in the sun. The approach I have taken is to use the solar panel as the shade and to try to maintain an air gap between the panels and the enclosure for the weatherproof container; the solar panel will be very, very hot on a 40-degree Celsius day. Adding a Raspberry Pi 3/4/5 or Jetson Nano project and keeping them in a sealed container with a LiPo battery is likely to see dramatic thermal throttling and a heavily reduced lifespan. This board doesn't support this, and I wouldn't recommend this approach.
 
