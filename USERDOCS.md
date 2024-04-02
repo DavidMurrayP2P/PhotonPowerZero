@@ -1,18 +1,18 @@
 # User Documentation of the Photon Power Zero
 
 ## Before installing the Photon Power Zero on the Pi ###
-
-Start by writing a light image of PiOS onto your SD card. The following video steps you through this, as well as getting the settings right to be able to SSH into your Raspberry Pi without ever plugging a screen in.
+ 
+Start by writing a headles PiOS lite image onto your SD card. The following video steps you through this, as well as getting the settings right to be able to SSH into your Raspberry Pi without ever plugging a screen in.
 
 
 [![Video Thumbnail](img/SD_card_install.png)]( https://youtu.be/duxeGzRcJmE "Physically Installing the Photon Powre Zero on the Raspberry Pi Zero")
 
 
-After flashing your Rasberry Pi using the instructions above, insert the SD card into your Raspberry Pi and plug the power in without the Photon Power Zero attached. Note that the first time the Pi Zero boots after flashing the SD card, it takes me before you can see the device on your LAN. Go get yourself a coffee and wait for it to appear.
+After flashing your Rasberry Pi using the instructions above, insert the SD card into your Raspberry Pi and plug the power the Raspberry Pi Zero through the micro USB connector as shown below. Note that the first time the Pi Zero boots after flashing the SD card, it takes me a while befroe you can see the device on your LAN. Go get yourself a coffee, be paitent and wait for it to appear; it often takes 5-10 minutes to appear during the first boot of a newly imaged SD card.
 
 ![Alt text](img/RPi.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">Start by Powering the Raspberry Pi through USB
 
-In the image above, the Pi is being powered via a regular USB cable while we set it up for the Photon Power Zero. Make sure you never power it through the Photon Power Zero and the USB port simultaneously. Now:
+In the image above, the Pi is being powered via a regular USB cable while we set it up for the Photon Power Zero. Make sure you NEVER power it through the Photon Power Zero and the USB port simultaneously. Now:
 
 SSH into your Rasberry Pi with
 
