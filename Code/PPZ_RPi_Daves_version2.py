@@ -42,13 +42,11 @@ def get_temp():
     return temp
 
 def send_data(event):
-    home_directory = os.path.expanduser("~")
+    home_directory = os.path.expanduser("~")                                  
     print(home_directory)
-
-    img_location = str(home_directory) + "/img/"
-    data_location = str(home_directory) + "/data.txt"
-    print(img_location)
-    print(data_location)
+    
+    img_location = "/home/ph0tons/img/"
+    data_location = "/home/ph0tons/data/data.txt"
     time_now = current_system_time()
 
     message = (str(dev_id) + " " + str(event) + "\n" + "Uptime: " + str(uptime) + " hours\n" + "Batt: " + str(battery_voltage) + "V \n" + "Temp: " + str(temp) + " degrees" + "\nTime: " + str(time_now))
