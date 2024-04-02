@@ -21,6 +21,9 @@ SSH into your Rasberry Pi with
 Install required packages
 
 `sudo apt update`
+
+Then:
+
 `sudo apt install python3 tmux libcamera-apps python3-pip`
 
 Now, we are going to allow a graceful shutdown if GPIO Pin 20 is pulled low; the Raspberry Pi will shut down. This is how a shutdown is initiated from the Photon Power Zero to the Raspberry Pi.
