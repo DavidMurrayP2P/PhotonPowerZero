@@ -1,8 +1,9 @@
 # PhotonPowerZero PCB
 
-Image
 
-##BOM
+![Alt text](../img/PhotonPowerZero.jpg?raw=true "Title") <p style="text-align:center; font-style:italic;">Photon Power Zero Board</p>
+
+### BOM ###
  - 1k	4	https://www.digikey.com.au/en/products/detail/yageo/RC0603FR-071KL/726843
  - 10k	5	https://www.digikey.com.au/en/products/detail/yageo/RC0603JR-0710KL/726700
  - 1.13k	1	https://www.digikey.com.au/en/products/detail/yageo/RC0603FR-071K13L/726849
