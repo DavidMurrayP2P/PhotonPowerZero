@@ -1,8 +1,8 @@
 union () {
 difference(){
 union(){
-translate([-4,-2,1.9])cube([98,80,7], center=true);    
-translate([-13,-2,19.5])cube([80,80,31], center=true); 
+translate([-4,-2,1.9])cube([98,79.5,7], center=true);    
+translate([-13,-2,19.5])cube([80,79.5,31], center=true); 
 translate([-23.5,-6.5,19.5])cube([8,69,31], center=true);
 }
     //Cube LiPo Battery Core Electronics style
@@ -27,7 +27,7 @@ translate([-23.5,-6.5,19.5])cube([8,69,31], center=true);
 
     //Camera cable routing
     translate([-33,38,20])  rotate([0,0,0])   cylinder(27, r1=5, r2=5, center=true,$fn=128);
-
+    
     //Holes for battery terminals and solar plug
     translate([30,-30,16])cube([98,40.5,40], center=true);
     translate([30,30,16])cube([98,40.5,40], center=true);
@@ -84,6 +84,11 @@ translate([-23.5,-6.5,19.5])cube([8,69,31], center=true);
 
 }
 //Camera cable routing
-translate([-33,37,14])  rotate([0,0,0])   cylinder(30, r1=2.3, r2=2.3, center=true,$fn=128);
+difference() {
+    
+    
+    translate([-33,37,14])  rotate([0,0,0])   cylinder(30, r1=2.3, r2=2.3, center=true,$fn=128);
+#    translate([-36.8,45.9,20])  cube([50,16.3,50], center=true);
         }
+    }
 
