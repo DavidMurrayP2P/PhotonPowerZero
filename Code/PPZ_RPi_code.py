@@ -24,6 +24,10 @@ def get_unix_time_as_string():
     unix_time = int(time.time())
     return str(unix_time)
 
+def current_system_time():
+    now = datetime.datetime.now()
+    return now
+
 def get_uptime():
     with open('/proc/uptime', 'r') as f:
         uptime_seconds = float(f.readline().split()[0])
@@ -38,7 +42,7 @@ def get_temp():
     return temp
 
 def send_data(event):
-    message = (str(dev_id) + " " + str(event) + "\n" + "Uptime: " + str(uptime) + " hours\n" + "Batt: " + str(battery_voltage) + "V \n" + "Temp: " + str(temp) + " degrees")
+    message = (str(dev_id) + " " + str(event) + "\n" + "Uptime: " + str(uptime) + " hours\n" + "Batt: " + str(battery_voltage) + "V \n" + "Temp: " + str(temp) + " degrees" + "\nTime: " + str(time_now))
     print(message)
 
     print("This is where a user can implement interesting stuff.")
