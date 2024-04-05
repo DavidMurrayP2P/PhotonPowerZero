@@ -22,5 +22,5 @@ image1
 Image 3
 
  - 6 x M3 heat set inserts OD 5mm Length 10mm https://www.aliexpress.com/item/1005004535859664.html
- - 6 x M5 50mm Staintelss steel hex bolt https://www.thefastenerfactory.com.au/stainless-steel-hex-socket-head-cap-screw-m3-x-50mm-100pca
- - Solar Panel https://voltaicsystems.com/9-watt-panel/ 
+ - 6 x M3 50mm Staintelss steel hex bolt https://www.thefastenerfactory.com.au/stainless-steel-hex-socket-head-cap-screw-m3-x-50mm-100pc
+ - Solar Panel https://voltaicsystems.com/6-watt-panel/

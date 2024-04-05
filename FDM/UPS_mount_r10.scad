@@ -37,15 +37,16 @@ translate([-23.5,-6.5,19.5])cube([8,69,31], center=true);
     
      //battery cable routing
     translate([-34,-37,27])  cube([15,10,20], center=true);
-    #translate([-51.5,-38.7,9]) rotate([0,0,0])  cylinder(h=20, r1=1.9, r2=1.9, center=true,$fn=24);
+    #translate([-51,-38.7,10]) rotate([0,0,0])  cylinder(h=20, r1=1.9, r2=1.9, center=true,$fn=24);
+    #translate([-52,-38.7,0])  cube([4,1.6,35], center=true);
     
-    translate([-36,-39,0])  cube([35,1.6,4], center=true);
+    translate([-36,-38.7,0])  cube([35,1.6,4], center=true);
 
 
     //translate([-46.5,-37.5,20.7])rotate([0,90,0])   cylinder(h=12.05, r1=3.75, r2=3.75, center=true,$fn=24);
     translate([-46,-39.5,29])  cube([20,11.1,24], center=true);
    
-    #translate([-35,-39,0.7])rotate([0,90,0])   cylinder(h=35, r1=1.8, r2=1.8, center=true,$fn=24);
+    translate([-35,-39,0.7])rotate([0,90,0])   cylinder(h=35, r1=1.9, r2=1.9, center=true,$fn=24);
 
     
     ///camera holes
@@ -88,7 +89,7 @@ difference() {
     
     
     translate([-33,37,14])  rotate([0,0,0])   cylinder(30, r1=2.3, r2=2.3, center=true,$fn=128);
-#    translate([-36.8,45.9,20])  cube([50,16.3,50], center=true);
+    translate([-36.8,45.9,20])  cube([50,16.3,50], center=true);
         }
     }
 
