@@ -1,26 +1,7 @@
-# Photon Power Zero 3D Prints 
+# Photon Power Zero Mounts and Cases
 
-All of these Parts are designed to be printed in ABS or better. You may print is PLA if your use case is indoor only but otherwise, the reccomendation is ABS.
+The purpose of this section is to provide ways to mount your Laspberry Pi Zero and Photon Power Zero as well as provide mounts inside cases, batteries, solar panels, cameras and common acessories. 
 
-## Indoor UPS
- - 4x M2.5 heat set inserts like https://www.aliexpress.com/item/1005004535859664.html
- - M2.5 Mounting hardware https://www.aliexpress.com/item/1005004275784627.html
- - USB to barrel Jack cable: https://www.aliexpress.com/item/1005003706471183.html
- - See LiPo instructions below
+In each of these subdirectories, there should be links to 3D printer files as well as instructions on how to print, and links to what should be purchased. 
 
-image1
-
-## Outdoor Solar Node
-
-### Enclosure
-
- - 4x M2.5 heat set inserts like https://www.aliexpress.com/item/1005004535859664.html
- - M2.5 Mounting hardware https://www.aliexpress.com/item/1005004275784627.html
- - Aluminium Enclosure https://www.jaycar.com.au/aluminium-enclosure-with-clear-ends/p/HB6294
-
-### Solar Panel and Mount
-Image 3
-
- - 6 x M3 heat set inserts OD 5mm Length 10mm https://www.aliexpress.com/item/1005004535859664.html
- - 6 x M3 50mm Staintelss steel hex bolt https://www.thefastenerfactory.com.au/stainless-steel-hex-socket-head-cap-screw-m3-x-50mm-100pc
- - Solar Panel https://voltaicsystems.com/6-watt-panel/
+The hope is that, as a community, we can suport a wide range of solar panels, batteries and water proof enclosures. 
