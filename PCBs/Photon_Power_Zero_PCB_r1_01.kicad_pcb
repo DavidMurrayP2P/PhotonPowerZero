@@ -115,7 +115,7 @@
 			(mirror no)
 			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "gerbers/")
+			(outputdirectory "/home/david/PhotonPowerZero/PCBs/gerbers/")
 		)
 	)
 	(net 0 "")

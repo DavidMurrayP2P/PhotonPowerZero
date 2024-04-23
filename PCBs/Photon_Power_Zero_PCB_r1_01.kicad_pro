@@ -272,7 +272,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "gerbers/",
+      "plot": "/home/david/PhotonPowerZero/PCBs/gerbers/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
