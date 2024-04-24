@@ -6,6 +6,13 @@ All of these Parts are designed to be printed in ABS or better. You may print is
 
 ![Alt text](../../img/Mount_Pi_PPZ_inside_Multicomp_MC002194.png?raw=true "Title")<p style="text-align:center; font-style:italic;">Mount inside the Multicomp MC002194 Enclosure
 
+![Alt text](../../img/panel_multicomp_mount.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">Physically Fitting it together, put a 25mm PVC pipe to connect the structure to the soil or a Ubolt clamp
+panel_multicomp_mount.jpg
+
+![Alt text](../../img/case_mount_inside_Multicomp_MC002194.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">The case mount goes inside the multicomp. you need to drill a hole in the aluminium and use a Waterproof cable gland PG-7
+
+case_mount_inside_Multicomp_MC002194.jpg
+
 This is based on the MULTICOMP PRO MC002194 Metal Enclosure, Small, Extruded Aluminium, 51.6 mm, 119 mm, 115.1 mm Links:
 - https://www.jaycar.com.au/aluminium-enclosure-with-clear-ends/p/HB6294
 - https://il.farnell.com/multicomp/mc002194/multipurpose-enclosure-alum-silver/dp/2830527
@@ -23,3 +30,4 @@ You would also want:
  - 6 x M3 heat set inserts OD 5mm Length 10mm https://www.aliexpress.com/item/1005004535859664.html
  - 6 x M3 50mm Staintelss steel hex bolt https://www.thefastenerfactory.com.au/stainless-steel-hex-socket-head-cap-screw-m3-x-50mm-100pc
  - Solar Panel https://voltaicsystems.com/6-watt-panel/
+ - Waterproof Cable Gland PG-7 https://core-electronics.com.au/waterproof-cable-gland-pg-7-size-gray.html
