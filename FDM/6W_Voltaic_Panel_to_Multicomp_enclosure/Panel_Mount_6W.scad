@@ -21,10 +21,10 @@ union(){
     translate([66,82,2])cube([33,27,10],center=true,$fn=24);
     translate([66,-82,2])cube([33,27,10],center=true,$fn=24);
 
-    #translate([22.5,84,2])cube([35,40,10],center=true,$fn=24);
-    #translate([-22.5,-84,2])cube([35,40,10],center=true,$fn=24);
-    #translate([22.5,-84,2])cube([35,40,10],center=true,$fn=24);
-    #translate([-22.5,84,2])cube([35,40,10],center=true,$fn=24);
+    translate([22.5,84,2])cube([35,40,10],center=true,$fn=24);
+    translate([-22.5,-84,2])cube([35,40,10],center=true,$fn=24);
+    translate([22.5,-84,2])cube([35,40,10],center=true,$fn=24);
+    translate([-22.5,84,2])cube([35,40,10],center=true,$fn=24);
     
     //Cutouts for pannel screws
     translate([-80.7, -103.7, 1])cylinder(h=5, r=3.2, center=true,$fn=24);
