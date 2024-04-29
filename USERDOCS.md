@@ -2,8 +2,9 @@
 
 ## Before installing the Photon Power Zero on the Pi ###
  
+If you have a Raspberry Pi Zero without soldered headers, you are going to need to solder headers on. You can do this yourself and there is a my  [Soldering a header on a Raspberry Pi Zero 2](https://youtu.be/pwCCnsn2Mug) video.
+ 
 Start by writing a headles PiOS lite image onto your SD card. The following video steps you through this, as well as getting the settings right to be able to SSH into your Raspberry Pi without ever plugging a screen in.
-
 
 [![Video Thumbnail](img/SD_card_install.png)]( https://youtu.be/duxeGzRcJmE "Physically Installing the Photon Powre Zero on the Raspberry Pi Zero")
 

@@ -32,6 +32,8 @@ Metal Enclosure, Small, Extruded Aluminium, 51.6 mm, 119 mm, 115.1 mm Links:
 #### 6W Voltaic Panel
 
  - Solar Panel https://voltaicsystems.com/6-watt-panel/
+ - Right angled Female 3.5x1.1mm - 5.5x2.1mm: https://voltaicsystems.com/A106
+ - If you get an EFTE panel you need to get ETFE Panel Screw & Washer Set https://voltaicsystems.com/mount-set-etfe/
 
 ## Finished Construction
 
