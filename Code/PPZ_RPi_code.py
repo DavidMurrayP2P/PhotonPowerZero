@@ -42,7 +42,7 @@ def get_temp():
     return temp
 
 def send_data(event):
-    message = (str(dev_id) + " " + str(event) + "\n" + "Uptime: " + str(uptime) + " hours\n" + "Batt: " + str(battery_voltage) + "V \n" + "Temp: " + str(temp) + " degrees" + "\nTime: " + str(time_now))
+    message = (str(dev_id) + " " + str(event) + "\n" + "Uptime: " + str(uptime) + " hours\n" + "Batt: " + str(battery_voltage) + "V \n" + "Temp: " + str(temp) + " degrees" + "\nTime: " + str(now))
     print(message)
 
     print("This is where a user can implement interesting stuff.")
