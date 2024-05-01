@@ -28,7 +28,7 @@ Then:
 
 Now, we are going to allow a graceful shutdown if GPIO Pin 20 is pulled low; the Raspberry Pi will shut down. This is how a shutdown is initiated from the Photon Power Zero to the Raspberry Pi.
 
-`sudo nano /boot/config.txt`
+`sudo nano /boot/firmware/config.txt`
 
 Then, we insert the following line at the end of the file:
 
