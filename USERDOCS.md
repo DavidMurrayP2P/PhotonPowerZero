@@ -8,7 +8,7 @@ Start by writing a headles PiOS lite image onto your SD card. The following vide
 
 [![Video Thumbnail](img/SD_card_install.png)]( https://youtu.be/duxeGzRcJmE "Physically Installing the Photon Powre Zero on the Raspberry Pi Zero")
 
-Not that the 64-bit image is not currently supported. Pleas choose the 32-bit OS on the RPi. After flashing your Rasberry Pi using the instructions above, insert the SD card into your Raspberry Pi, then power the Raspberry Pi Zero through the micro USB connector as shown in the image below. Note that the first time the Pi Zero boots after flashing the SD card, it takes a while before you can see the device on your LAN. Go get yourself a coffee, be paitent and wait for it to appear; it often takes 5-10 minutes to appear during the first boot of a newly imaged SD card.
+After flashing your Rasberry Pi using the instructions above, insert the SD card into your Raspberry Pi, then power the Raspberry Pi Zero through the micro USB connector as shown in the image below. Note that the first time the Pi Zero boots after flashing the SD card, it takes a while before you can see the device on your LAN. Go get yourself a coffee, be paitent and wait for it to appear; it often takes 5-10 minutes to appear during the first boot of a newly imaged SD card.
 
 ![Alt text](img/RPi.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">Start by Powering the Raspberry Pi through USB
 
