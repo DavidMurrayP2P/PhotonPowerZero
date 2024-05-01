@@ -84,7 +84,7 @@ The image below will take you to a YouTube video showing you how to carefully in
 
 Note: Never power the Raspberry Pi via the LiPo Battery and the USB port on the Raspberry Pi. **You cannot charge the battery from the 5v USB port on the Raspberry Pi.**
 
-Now you can plug in your battery first, then your cable that will charge the battery over USB. If your battery is well charged, your Pi should start booting.
+Now you can plug in your battery first, then your cable that will charge the battery over USB. If your battery is well charged, your Pi should start booting. Note that if your battery is not well charged and the voltage of your LiPo battery is below 3.75V, then your Raspberry Pi will not turn on. If you are charging from USB, then likely you will need to be very paitent as USB will limit the charge rate to 0.1 Amps.
 
 SSH in and then, as a user, run:
 
