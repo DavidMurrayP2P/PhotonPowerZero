@@ -30,6 +30,10 @@ Now, we are going to allow a graceful shutdown if GPIO Pin 20 is pulled low; the
 
 `sudo nano /boot/config.txt`
 
+If you are using the latest 64 bit image you may need to:
+
+`sudo nano /boot/firmware/config.txt`
+
 Then, we insert the following line at the end of the file:
 
 `dtoverlay=gpio-shutdown,gpio_pin=21,active_low=1,gpio_pull=up`
