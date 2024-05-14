@@ -9,7 +9,7 @@ You can find the user docs, showing you how to get started with the Photon Power
 
 ![Alt text](img/PhotonPowerZero.jpg?raw=true "Title") <p style="text-align:center; font-style:italic;">Photon Power Zero Board</p>
 
-The project is more than just the Photon Power Zero board. I want to create and share all components to make deploying a Raspberry Pi Zero outdoors as easy as possible. You can collaborate on the project and recieve support through the [Discord](https://discord.gg/m6yySrRV)
+The project is more than just the Photon Power Zero board. I want to create and share all components to make deploying a Raspberry Pi Zero outdoors as easy as possible. You can collaborate on the project and recieve support through the [Discord](https://discord.gg/BphNWmj6Xg)
 
 [![Video Thumbnail](img/Outdoor_Node.png)]( https://www.youtube.com/watch?v=qGwqMnN81YI") <p style="text-align:center; font-style:italic;">Youtube Video describing the Project and the goals</p>
 
