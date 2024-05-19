@@ -78,6 +78,10 @@ You should have a message saying:
 
 Internet connection working
 
+Note that if you have never used tmux before, you can exit this terminal by hitting 
+
+`ctrl b then d`
+
 Turn off your Pi by removing the USB Power. Now remove the USB cable from your desk; I want to prevent you from powering your Pi through this again. You must NEVER power your Raspberry Pi through that USB port while the Photon Power Zero board is attached.
 
 ## Physically Install the Photon Power Zero on the Rasberry Pi Zero
