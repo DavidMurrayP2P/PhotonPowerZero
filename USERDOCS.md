@@ -106,4 +106,9 @@ sudo apt update
 sudo apt install openssh-server
 ```
 
+Note if you have what looks like a runtime error on your Raspberry Pi and are running the latest Bookworm release. Try the following
 
+```
+sudo apt remove python3-rpi.gpio
+sudo apt install python3-rpi-lgpio
+```
