@@ -213,3 +213,5 @@ while True:
 
     except:
         print("An error... ")
+	#slowdown error to prevent temp increase    
+	time.sleep(15)
