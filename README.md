@@ -3,9 +3,10 @@
 The Photon Power Zero project aims to build an ecosystem of electronics, code, BoM and 3D printable parts that make it as easy as possible to go from a Raspberry Pi Zero proof of concept, sitting on someone's desk, to an outdoor deployment. The first 50 boards sold out through this [Kickstarter](https://www.kickstarter.com/projects/packets2photons/photon-power-zero) and you can purchase boards avaliable after the kickstarter at [Packets2Photons](https://packets2photons.com.au)
 
 You can find the user docs, showing you how to get started with the Photon Power Zero, and the design decisions around the board here:
-* [USERDOCS](USERDOCS.md)
+* [USERDOCS](USERDOCS.md) 
 * [DESIGN_AND_DECISIONS](DESIGN_AND_DECISIONS.md)
 * [LIPO_PURCHASING](LIPO_PURCHASING.md)
+* [6W SOLAR BUILD](FDM/6W_Voltaic_Panel_to_Multicomp_enclosure/README.md)
 
 ![Alt text](img/PhotonPowerZero.jpg?raw=true "Title") <p style="text-align:center; font-style:italic;">Photon Power Zero Board</p>
 
