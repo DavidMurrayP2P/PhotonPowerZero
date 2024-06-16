@@ -123,3 +123,5 @@ Note if you have what looks like a runtime error on your Raspberry Pi and are ru
 sudo apt remove python3-rpi.gpio
 sudo apt install python3-rpi-lgpio
 ```
+
+After running this, make sure you reboot.
