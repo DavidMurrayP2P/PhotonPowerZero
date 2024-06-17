@@ -25,6 +25,8 @@ Install required packages with:
 Then:
 
 `sudo apt install python3 tmux libcamera-apps python3-pip`
+'sudo apt remove python3-rpi.gpio'
+'sudo apt install python3-rpi-lgpio'
 
 Now, we are going to allow a graceful shutdown if GPIO Pin 20 is pulled low; the Raspberry Pi will shut down. This is how a shutdown is initiated from the Photon Power Zero to the Raspberry Pi.
 
@@ -117,11 +119,11 @@ sudo apt update
 sudo apt install openssh-server
 ```
 
-Note if you have what looks like a runtime error on your Raspberry Pi and are running the latest Bookworm release. Try the following
+Note if you are not running the latest version of PiOS, Bookworm or later then you may need to 
 
 ```
-sudo apt remove python3-rpi.gpio
-sudo apt install python3-rpi-lgpio
+sudo apt remove python3-rpi.lgpio
+sudo apt install python3-rpi-gpio
 ```
 
 After running this, make sure you reboot.
