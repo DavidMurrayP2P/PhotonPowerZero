@@ -26,12 +26,12 @@ Metal Enclosure, Small, Extruded Aluminium, 51.6 mm, 119 mm, 115.1 mm Links:
  - 4x M2.5 heat set inserts like https://www.aliexpress.com/item/1005004535859664.html
  - M2.5 Mounting hardware https://www.aliexpress.com/item/1005004275784627.html
   - Waterproof Cable Gland PG-7 https://core-electronics.com.au/waterproof-cable-gland-pg-7-size-gray.html
-  -  6 x M3 heat set inserts OD 5mm Length 10mm https://www.aliexpress.com/item/1005004535859664.html - These go on the underside of the pannel fitting
+  -  6 x M3 heat set inserts OD 5mm Length 10mm https://www.aliexpress.com/item/1005004535859664.html - These go on the underside of the panel fitting
  - 6 x M3 50mm Staintelss steel hex bolt https://www.thefastenerfactory.com.au/stainless-steel-hex-socket-head-cap-screw-m3-x-50mm-100pc
 
-#### 6W Voltaic Panel
+#### 10W Voltaic Panel
 
- - Solar Panel https://voltaicsystems.com/6-watt-panel/ 
+ - Solar Panel https://voltaicsystems.com/10-watt-panel-etfe/ OR https://www.adafruit.com/product/5369 OR https://core-electronics.com.au/5v-10w-solar-panel-etfe-voltaic-p110.html
  - Right angled Female 3.5x1.1mm - 5.5x2.1mm: https://voltaicsystems.com/A106 or https://www.adafruit.com/product/4287
  - If you get an EFTE panel you need to get ETFE Panel Screw & Washer Set https://voltaicsystems.com/mount-set-etfe/ these are 4-40 but an M3 should work
 
