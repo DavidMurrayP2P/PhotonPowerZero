@@ -7,6 +7,7 @@ You can find the user docs, showing you how to get started with the Photon Power
 * [DESIGN_AND_DECISIONS](DESIGN_AND_DECISIONS.md)
 * [LIPO_PURCHASING](LIPO_PURCHASING.md)
 * [6W SOLAR BUILD](FDM/6W_Voltaic_Panel_to_Multicomp_enclosure/README.md)
+* [10W SOLAR BUILD](FDM/10W_Voltaic_Panel_to_Multicomp_enclosure/README.md)
 
 ![Alt text](img/PhotonPowerZero.jpg?raw=true "Title") <p style="text-align:center; font-style:italic;">Photon Power Zero Board</p>
 
