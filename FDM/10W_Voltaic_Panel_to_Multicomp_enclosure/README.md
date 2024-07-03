@@ -1,8 +1,10 @@
 # 10W Voltaic Solar Panel to MULTICOMP PRO MC002194 enclosure
 
-This is panel mount for Voltaic's 10W solar panel. All of these Parts are designed to be printed in ABS or better. You may print is PLA if your use case is indoor only but otherwise, the reccomendation is ABS or better, such as ASA.
+This is panel mount for Voltaic's 10W solar panel. All of these Parts are designed to be printed in ABS or better. You may try printing in PLA if your use case is indoor only or you cliamet is cool. Otherwise, the reccomendation is ABS or better, such as ASA.
 
 ![Alt text](../../img/10W_voltaic_to_Multicomp_MC002194.png?raw=true "Title")<p style="text-align:center; font-style:italic;">Connect the 10W volatic Panel to the Mutlicomp MC002194 Enclosure and 25mm OD PVC Pipe. This is obviously printed in two parts. 
+
+The image above shows what the mount looks like but you can print it in two parts. This should be divided up for you already in the files pole_mount.stl and Panel_Mount_10W.stl
 
 ![Alt text](../../img/Mount_Pi_PPZ_inside_Multicomp_MC002194.png?raw=true "Title")<p style="text-align:center; font-style:italic;">Mount inside the Multicomp MC002194 Enclosure
 
@@ -23,9 +25,12 @@ Metal Enclosure, Small, Extruded Aluminium, 51.6 mm, 119 mm, 115.1 mm Links:
 
 #### Fixing hardware 
 
+These are for mounting the Raspberry Pi Zero to the case inside the enclosure
  - 4x M2.5 heat set inserts like https://www.aliexpress.com/item/1005004535859664.html
  - M2.5 Mounting hardware https://www.aliexpress.com/item/1005004275784627.html
-  - Waterproof Cable Gland PG-7 https://core-electronics.com.au/waterproof-cable-gland-pg-7-size-gray.html
+  - Waterproof Cable Gland https://core-electronics.com.au/cable-gland-pg-9-size-0-158-to-0-252-cable-diameter-pg-9.html OR https://www.adafruit.com/product/761
+  
+These are for bolting pole_mount.stl and Panel_Mount_10W.stl together. 
   -  6 x M3 heat set inserts OD 5mm Length 10mm https://www.aliexpress.com/item/1005004535859664.html - These go on the underside of the panel fitting
  - 6 x M3 50mm Staintelss steel hex bolt https://www.thefastenerfactory.com.au/stainless-steel-hex-socket-head-cap-screw-m3-x-50mm-100pc
 
