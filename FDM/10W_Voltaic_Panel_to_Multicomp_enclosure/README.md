@@ -2,7 +2,7 @@
 
 This is panel mount for Voltaic's 10W solar panel. All of these Parts are designed to be printed in ABS or better. You may print is PLA if your use case is indoor only but otherwise, the reccomendation is ABS or better, such as ASA.
 
-![Alt text](../../img/6W_voltaic_to_Multicomp_MC002194.png?raw=true "Title")<p style="text-align:center; font-style:italic;">Connect the 6W volatic Panel to the Mutlicomp MC002194 Enclosure and 25mm OD PVC Pipe. This is obviously printed in two parts. 
+![Alt text](../../img/10W_voltaic_to_Multicomp_MC002194.png?raw=true "Title")<p style="text-align:center; font-style:italic;">Connect the 10W volatic Panel to the Mutlicomp MC002194 Enclosure and 25mm OD PVC Pipe. This is obviously printed in two parts. 
 
 ![Alt text](../../img/Mount_Pi_PPZ_inside_Multicomp_MC002194.png?raw=true "Title")<p style="text-align:center; font-style:italic;">Mount inside the Multicomp MC002194 Enclosure
 
@@ -11,7 +11,7 @@ panel_multicomp_mount.jpg
 
 ![Alt text](../../img/case_mount_inside_Multicomp_MC002194.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">The case mount goes inside the multicomp. you need to drill a hole in the aluminium and use a Waterproof cable gland PG-7
 
-## BOM
+## Bill of Materials (BOM)
 
 #### MULTICOMP PRO MC002194 
 Metal Enclosure, Small, Extruded Aluminium, 51.6 mm, 119 mm, 115.1 mm Links:
