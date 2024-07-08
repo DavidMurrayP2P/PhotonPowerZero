@@ -26,19 +26,19 @@ You can then srcew the two parts together:
 
 ![Alt text](../../img/two_parts_joined_together.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">Screw the two parts together
 
-Use 50mm M3 screws to put screw pole_mount.stl into the panel mount.
-
-![Alt text](../../img/Put_together_1.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">Use 50mm M3 screws to put screw pole_mount.stl into the panel mount.
-
-
-![Alt text](../../img/Put_together_2.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">Screwed together
-
 ![Alt text](../../img/Mount_Pi_PPZ_inside_Multicomp_MC002194.png?raw=true "Title")<p style="text-align:center; font-style:italic;">Mount inside the Multicomp MC002194 Enclosure
 
 ![Alt text](../../img/panel_multicomp_mount.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">Physically Fitting it together, put a 25mm PVC pipe to connect the structure to the soil or a Ubolt clamp
 panel_multicomp_mount.jpg
 
-![Alt text](../../img/case_mount_inside_Multicomp_MC002194.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">The case mount goes inside the multicomp. you need to drill a hole in the aluminium and use a Waterproof cable gland PG-7
+![Alt text](../../img/case_mount_inside_Multicomp_MC002194.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">The case mount goes inside the multicomp. you need to drill a hole in the aluminium and use a Waterproof cable gland PG-9
+
+Use 50mm M3 screws to put screw pole_mount.stl into the panel mount.
+
+![Alt text](../../img/Put_together_1.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">Use 50mm M3 screws to put screw pole_mount.stl into the panel mount.
+
+![Alt text](../../img/Put_together_2.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">Screwed together
+
 
 ## Bill of Materials (BOM)
 
