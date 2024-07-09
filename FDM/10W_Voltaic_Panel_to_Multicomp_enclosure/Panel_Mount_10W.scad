@@ -42,7 +42,7 @@ union(){
     
 
     //subtracting from the bottom plate    
-    #translate([-10,0,27.3])cube([104,110,45],center=true,$fn=24);
+    translate([-10,0,27.3])cube([104,110,45],center=true,$fn=24);
 
     translate([-35,0,2])cube([30,105,100],center=true,$fn=24);
     translate([15,0,2])cube([30,105,100],center=true,$fn=24);

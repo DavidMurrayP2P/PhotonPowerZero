@@ -1,8 +1,8 @@
 # 10W Voltaic Solar Panel to MULTICOMP PRO MC002194 enclosure
 
-This is a panel mount for Voltaic's 10W solar panel. All of these Parts are designed to be printed in ABS or better. You may try printing in PLA if your use case is indoor only or you cliamet is cool. Otherwise, the reccomendation is ABS or better, such as ASA.
+This is a panel mount for Voltaic's 10W solar panel. These have been printed and tested using ABS, but other materials may work well too. ASA will almost certainly be as good. I also think that PETG will likely work, but this is untested. 
 
-The image below shows the entire stet of printed parts but they must be printed in multipl parts
+The image below shows the entire stet of printed parts but they must be printed in multiple parts.
 
 ![Alt text](../../img/10W_voltaic_to_Multicomp_MC002194.png?raw=true "Title")<p style="text-align:center; font-style:italic;">Connect the 10W volatic Panel to the Mutlicomp MC002194 Enclosure and 25mm OD PVC Pipe. This is obviously printed in two parts. 
 
