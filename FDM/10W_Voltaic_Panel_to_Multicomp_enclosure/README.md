@@ -1,7 +1,5 @@
 # 10W Voltaic Solar Panel to MULTICOMP PRO MC002194 enclosure
 
-`## Bill of Materials (BOM)`
-
 This is a panel mount for Voltaic's 10W solar panel. These have been printed and tested using ABS, but other materials may work well too. ASA will almost certainly be as good. I also think that PETG will likely work, but this is untested. There is a [Bill of Materials (BOM)](#bill-of-materials-bom) which links to multiple sources, at the bottom of the page,
 
 The image below shows the entire stet of printed parts but they must be printed in multiple parts.
