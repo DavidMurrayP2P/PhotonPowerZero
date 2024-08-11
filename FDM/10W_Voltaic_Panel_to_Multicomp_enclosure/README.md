@@ -1,8 +1,8 @@
 # 10W Voltaic Solar Panel to MULTICOMP PRO MC002194 enclosure
 
-This is a panel mount for Voltaic's 10W solar panel. These have been printed and tested using ABS, but other materials may work well too. ASA will almost certainly be as good. I also think that PETG will likely work, but this is untested. There is a [Bill of Materials (BOM)](#bill-of-materials-bom) which links to multiple sources, at the bottom of the page,
+This is a panel mount for Voltaic's 10W solar panel. These have been printed and tested using ABS, but other materials may work well too. ASA will almost certainly be as good. I also think that PETG will likely work, but this is untested. There is a [Bill of Materials (BOM)](#bill-of-materials-bom) which links to multiple sources, at the bottom of the page. All the files required for printing can be found here [10W Voltaic Panel to Multicomp enclosure](https://github.com/DavidMurrayP2P/PhotonPowerZero/tree/main/FDM/10W_Voltaic_Panel_to_Multicomp_enclosure).
 
-The image below shows the entire stet of printed parts but they must be printed in multiple parts.
+The image below shows the entire stet of printed parts but they must be printed in multiple parts. How many parts will depend on your printer size.
 
 ![Alt text](../../img/10W_voltaic_to_Multicomp_MC002194.png?raw=true "Title")<p style="text-align:center; font-style:italic;">Connect the 10W volatic Panel to the Mutlicomp MC002194 Enclosure and 25mm OD PVC Pipe. This is obviously printed in two parts. 
 
