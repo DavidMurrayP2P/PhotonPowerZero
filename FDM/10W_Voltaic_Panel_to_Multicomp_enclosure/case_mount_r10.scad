@@ -1,7 +1,7 @@
 union () {
 difference(){
 union(){
-translate([-4,0,1.7])cube([98,98,6.9], center=true);    
+translate([-4,0,1.7])cube([98,98,7.1], center=true);    
 translate([-13,-2,19.5])cube([80,79,31], center=true); 
 translate([-23.5,-6.5,19.5])cube([8,69,31], center=true);
 }
@@ -21,23 +21,23 @@ translate([-23.5,-6.5,19.5])cube([8,69,31], center=true);
     //translate([0,-29.5,-17])  rotate([0,90,0])   cylinder(h=115, r1=17, r2=17, center=true,$fn=128);
     
     //Cavity for camera cable
-    translate([-46.6,0,0.3]) rotate([0,-40,0]) cube([3.7,32,9], center=true);
+    translate([-46.6,0,-1.2]) rotate([0,-60,0]) cube([3.7,24,9], center=true);
     translate([-21,0,-0.5]) rotate([0,-22,0]) cube([30,16.3,3], center=true);
 
     //Camera cable routing
-    #translate([-31,38,20])  rotate([0,0,0])   cylinder(27, r1=5, r2=5, center=true,$fn=128);
+    translate([-31,38,20])  rotate([0,0,0])   cylinder(27, r1=5, r2=5, center=true,$fn=128);
     
     ///camera holes
-    translate([-51,10.5,25.5])rotate([0,90,0])   cylinder(h=5, r1=1.2, r2=1.2, center=true,$fn=24);
-    translate([-51,-10.5,25.5])rotate([0,90,0])   cylinder(h=5, r1=1.2, r2=1.2, center=true,$fn=24);
-    translate([-51,10.5,13])rotate([0,90,0])   cylinder(h=5, r1=1.2, r2=1.2, center=true,$fn=24);
-    translate([-51,-10.5,13])rotate([0,90,0])   cylinder(h=5, r1=1.2, r2=1.2, center=true,$fn=24);
+    translate([-51,10.5,24.5])rotate([0,90,0])   cylinder(h=5, r1=1.2, r2=1.2, center=true,$fn=24);
+    translate([-51,-10.5,24.5])rotate([0,90,0])   cylinder(h=5, r1=1.2, r2=1.2, center=true,$fn=24);
+    translate([-51,10.5,12])rotate([0,90,0])   cylinder(h=5, r1=1.2, r2=1.2, center=true,$fn=24);
+    translate([-51,-10.5,12])rotate([0,90,0])   cylinder(h=5, r1=1.2, r2=1.2, center=true,$fn=24);
 
     //camera cutout
-    translate([-52,0,17])cube([8,13,20], center=true);
+    #translate([-52,0,16])cube([8,13,20], center=true);
     
     //Camera installation
-    translate([-41,0,20])cube([20,32,35], center=true);
+    translate([-41,0,15])cube([20,32,30], center=true);
     
     //Holes for battery terminals and solar plug
     translate([30,-30,16])cube([98,40.5,40], center=true);

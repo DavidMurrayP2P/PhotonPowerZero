@@ -4,19 +4,19 @@
 
 difference(){
 union(){
-    translate([15,0,2])cube([274.5,225,2.5],center=true,$fn=24);
-    translate([-10,0,3.8])cube([102,128,6],center=true,$fn=24);
+    translate([15,0,2])cube([274.5,225,2.8],center=true,$fn=24);
+    translate([-25,0,3.8])cube([102,128,6],center=true,$fn=24);
     
-    translate([36.5, -59.5, 26])cube([9,9,50], center=true,$fn=24);
-    translate([-56.5, -59.5, 26])cube([9,9,50], center=true,$fn=24);
-    translate([36.5, 59.5, 26])cube([9,9,50], center=true,$fn=24);
-    translate([-56.5, 59.5, 26])cube([9,9,50], center=true,$fn=24);
-    translate([-10,59.5, 26])cube([9,9,50], center=true,$fn=24);
-    translate([-10, -59.5, 26])cube([9,9,50], center=true,$fn=24);
+    translate([21.5, -59.5, 26])cube([9,9,50], center=true,$fn=24);
+    translate([-71.5, -59.5, 26])cube([9,9,50], center=true,$fn=24);
+    translate([21.5, 59.5, 26])cube([9,9,50], center=true,$fn=24);
+    translate([-71.5, 59.5, 26])cube([9,9,50], center=true,$fn=24);
+    translate([-25,59.5, 26])cube([9,9,50], center=true,$fn=24);
+    translate([-25, -59.5, 26])cube([9,9,50], center=true,$fn=24);
     
     //You can comment the 4 lines below if you print in one piece
-    translate([15,75.5, 7])cube([23,41,12], center=true,$fn=128);
-    translate([15, -75.5, 7])cube([23,41,12], center=true,$fn=128);
+    translate([16,75.5, 7])cube([22,41,12], center=true,$fn=128);
+    translate([15, -75.5, 7])cube([22,41,12], center=true,$fn=128);
    
 }
     //Uncomment these to half the plate
@@ -42,21 +42,24 @@ union(){
     
 
     //subtracting from the bottom plate    
-    #translate([-10,0,28])cube([104,110,46],center=true,$fn=24);
+    translate([-25,0,28])cube([104,110,45.5],center=true,$fn=24);
 
-    translate([-35,0,2])cube([30,105,100],center=true,$fn=24);
-    translate([15,0,2])cube([30,105,100],center=true,$fn=24);
+    translate([-48,0,2])cube([33,105,100],center=true,$fn=24);
+    translate([-1,0,2])cube([34,105,100],center=true,$fn=24);
 
-    translate([-84,80,2])cube([46,30,100],center=true,$fn=24);
-    translate([-84,-80,2])cube([46,30,100],center=true,$fn=24);
-    translate([82,0,2])cube([82,110,100],center=true,$fn=24);
+    translate([-94,80,2])cube([36,30,100],center=true,$fn=24);
+    translate([-94,-80,2])cube([36,30,100],center=true,$fn=24);
+    translate([80,0,2])cube([108,110,100],center=true,$fn=24);
 
-    translate([89.5,80,2])cube([89.5,30,100],center=true,$fn=24);
-    translate([89.5,-80,2])cube([85.5,30,100],center=true,$fn=24);
-    translate([-84,0,2])cube([46,110,100],center=true,$fn=24);
+    translate([80,80,2])cube([108,30,100],center=true,$fn=24);
+    translate([80,-80,2])cube([108,30,100],center=true,$fn=24);
+    translate([-90,0,2])cube([30,110,100],center=true,$fn=24);
 
-    translate([-33,-80,2])cube([37,32,100],center=true,$fn=24);
-    translate([-33,80,2])cube([37,32,100],center=true,$fn=24);
+    translate([-48,-80,2])cube([37,32,100],center=true,$fn=24);
+    translate([-48,80,2])cube([37,32,100],center=true,$fn=24);
+    
+    translate([-8.5,-80,2])cube([24,32,100],center=true,$fn=24);
+    translate([-8.5,80,2])cube([24,32,100],center=true,$fn=24);
     
     //Cutouts for pannel screws
     translate([-115.4,-105.5, 1])cylinder(h=5, r=3.8, center=true,$fn=24);
@@ -80,39 +83,34 @@ union(){
     translate([145.4,105.5, 4])cylinder(h=4, r=5.7, center=true,$fn=24);
     
     //Heat set inserts
-    translate([36.5, 59.5, 0])cylinder(h=8, r=2.3, center=true,$fn=24);
-    translate([-56.5, -59.5, 0])cylinder(h=8, r=2.3, center=true,$fn=24);
-    translate([-56.5, 59.5,0])cylinder(h=8, r=2.3, center=true,$fn=24);
-    translate([36.5, -59.5, 0])cylinder(h=8, r=2.3, center=true,$fn=24);
-    translate([-10, 59.5,0])cylinder(h=8, r=2.3, center=true,$fn=24);
-    translate([-10, -59.5, 0])cylinder(h=8, r=2.3, center=true,$fn=24);
+    translate([21.5, 59.5, 0])cylinder(h=8, r=2.3, center=true,$fn=24);
+    translate([-71.5, -59.5, 0])cylinder(h=8, r=2.3, center=true,$fn=24);
+    translate([-71.5, 59.5,0])cylinder(h=8, r=2.3, center=true,$fn=24);
+    translate([21.5, -59.5, 0])cylinder(h=8, r=2.3, center=true,$fn=24);
+    translate([-25, 59.5,0])cylinder(h=8, r=2.3, center=true,$fn=24);
+    translate([-25, -59.5, 0])cylinder(h=8, r=2.3, center=true,$fn=24);
 
-    translate([36.5, 59.5, 15])cylinder(h=100, r=1.85, center=true,$fn=24);
-    translate([-56.5, 59.5, 15])cylinder(h=100, r=1.85, center=true,$fn=24);
-    translate([36.5, -59.5, 15])cylinder(h=100, r=1.85, center=true,$fn=24);
-    translate([-56.5, -59.5, 15])cylinder(h=100, r=1.85, center=true,$fn=24);
-    translate([-10, -59.5, 15])cylinder(h=100, r=1.85, center=true,$fn=24);
-    translate([-10, 59.5, 15])cylinder(h=100, r=1.85, center=true,$fn=24);
+    translate([21.5, 59.5, 15])cylinder(h=100, r=1.85, center=true,$fn=24);
+    translate([-71.5, 59.5, 15])cylinder(h=100, r=1.85, center=true,$fn=24);
+    translate([21.5, -59.5, 15])cylinder(h=100, r=1.85, center=true,$fn=24);
+    translate([-71.5, -59.5, 15])cylinder(h=100, r=1.85, center=true,$fn=24);
+    translate([-25, -59.5, 15])cylinder(h=100, r=1.85, center=true,$fn=24);
+    translate([-25, 59.5, 15])cylinder(h=100, r=1.85, center=true,$fn=24);
     
     //Air flow
-    translate([-43,0,9])  rotate([90,0,0])   cylinder(h=100, r=7, center=true,$fn=128);
-    translate([23,0,9])  rotate([90,0,0])   cylinder(h=100, r=7, center=true,$fn=128);
+        
+    translate([-30,48,9])  rotate([0,90,0])   cylinder(h=140, r=7, center=true,$fn=128);
+    translate([-30,-48,9])  rotate([0,90,0])   cylinder(h=140, r=7, center=true,$fn=128);
     
-    translate([-23,0,9])  rotate([90,0,0])   cylinder(h=100, r=7, center=true,$fn=128);
-    translate([3,0,9])  rotate([90,0,0])   cylinder(h=100, r=7, center=true,$fn=128);
+    translate([-30,12,9])  rotate([0,90,0])   cylinder(h=140, r=7, center=true,$fn=128);
+    translate([-30,-12,9])  rotate([0,90,0])   cylinder(h=140, r=7, center=true,$fn=128);
     
-    translate([0,48,9])  rotate([0,90,0])   cylinder(h=140, r=7, center=true,$fn=128);
-    translate([0,-48,9])  rotate([0,90,0])   cylinder(h=140, r=7, center=true,$fn=128);
-    
-    translate([0,12,9])  rotate([0,90,0])   cylinder(h=140, r=7, center=true,$fn=128);
-    translate([0,-12,9])  rotate([0,90,0])   cylinder(h=140, r=7, center=true,$fn=128);
-    
-    translate([0,30,9])  rotate([0,90,0])   cylinder(h=140, r=7, center=true,$fn=128);
-    translate([0,-30 ,9])  rotate([0,90,0])   cylinder(h=140, r=7, center=true,$fn=128);
+    translate([-30,30,9])  rotate([0,90,0])   cylinder(h=140, r=7, center=true,$fn=128);
+    translate([-30,-30 ,9])  rotate([0,90,0])   cylinder(h=140, r=7, center=true,$fn=128);
 }
 
 //Pole mount
-translate([-10,0,53])difference(){ 
+translate([-25,0,53])difference(){ 
 
 
 difference(){

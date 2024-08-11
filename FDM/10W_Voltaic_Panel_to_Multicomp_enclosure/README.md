@@ -1,6 +1,8 @@
 # 10W Voltaic Solar Panel to MULTICOMP PRO MC002194 enclosure
 
-This is a panel mount for Voltaic's 10W solar panel. These have been printed and tested using ABS, but other materials may work well too. ASA will almost certainly be as good. I also think that PETG will likely work, but this is untested. 
+`## Bill of Materials (BOM)`
+
+This is a panel mount for Voltaic's 10W solar panel. These have been printed and tested using ABS, but other materials may work well too. ASA will almost certainly be as good. I also think that PETG will likely work, but this is untested. There is a [Bill of Materials (BOM)](#bill-of-materials-bom) which links to multiple sources, at the bottom of the page,
 
 The image below shows the entire stet of printed parts but they must be printed in multiple parts.
 
@@ -28,10 +30,20 @@ You can then srcew the two parts together:
 
 ![Alt text](../../img/Mount_Pi_PPZ_inside_Multicomp_MC002194.png?raw=true "Title")<p style="text-align:center; font-style:italic;">Mount inside the Multicomp MC002194 Enclosure
 
-![Alt text](../../img/panel_multicomp_mount.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">Physically Fitting it together, put a 25mm PVC pipe to connect the structure to the soil or a Ubolt clamp
-panel_multicomp_mount.jpg
+Note that you will need to use a 15mm drill bit to drill a hole for the PG-19 waterproof cable gland to fit through.
 
 ![Alt text](../../img/case_mount_inside_Multicomp_MC002194.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">The case mount goes inside the multicomp. you need to drill a hole in the aluminium and use a Waterproof cable gland PG-9
+
+![Alt text](../../img/Solar_wiring_1.png?raw=true "Title")<p style="text-align:center; font-style:italic;">Wiring the solar
+
+![Alt text](../../img/Solar_wiring_2.png?raw=true "Title")<p style="text-align:center; font-style:italic;">Provide support for the connector while you plug it in
+
+![Alt text](../../img/Solar_wiring_3.png?raw=true "Title")<p style="text-align:center; font-style:italic;">Tighten the PG-9 Gland
+
+![Alt text](../../img/Solar_wiring_4.png?raw=true "Title")<p style="text-align:center; font-style:italic;">In the next step we will screw the plastic end on
+
+![Alt text](../../img/panel_multicomp_mount.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">Physically Fitting it together, put a 25mm PVC pipe to connect the structure to the soil or a Ubolt clamp
+panel_multicomp_mount.jpg
 
 Use 50mm M3 screws to put screw pole_mount.stl into the panel mount.
 
@@ -58,7 +70,7 @@ These are for mounting the Raspberry Pi Zero to the case inside the enclosure
   - Waterproof Cable Gland https://core-electronics.com.au/cable-gland-pg-9-size-0-158-to-0-252-cable-diameter-pg-9.html OR https://www.adafruit.com/product/761
   
 These are for bolting pole_mount.stl and Panel_Mount_10W.stl together. 
-  -  6 x M3 heat set inserts OD 5mm Length 10mm https://www.aliexpress.com/item/1005004535859664.html - These go on the underside of the panel fitting
+  -  6 x M3 heat set inserts OD 5mm Length ~8mm https://www.aliexpress.com/item/1005004535859664.html - These go on the underside of the panel fitting
  - 6 x M3 50mm Staintelss steel hex bolt https://www.thefastenerfactory.com.au/stainless-steel-hex-socket-head-cap-screw-m3-x-50mm-100pc
 
 #### 10W Voltaic Panel
@@ -71,4 +83,4 @@ These are for bolting pole_mount.stl and Panel_Mount_10W.stl together.
 
 The 25mm PVC pipe can go in the ground or you could use a UBolt. You can modify the scad to support any size round post that you like.
 
-![Alt text](../../img/Finished_Voltaic_to_Multicomp_MC002194.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">Finished construction
+![Alt text](../../img/Hero_shot.png?raw=true "Title")<p style="text-align:center; font-style:italic;">Finished construction

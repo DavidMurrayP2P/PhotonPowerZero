@@ -1,7 +1,7 @@
 union () {
 difference(){
 union(){
-translate([-4,0,1.9])cube([98,98,7], center=true);    
+translate([-4,0,1.9])cube([98,98,7.2], center=true);    
 translate([-13,-2,19.5])cube([80,79,31], center=true); 
 translate([-23.5,-6.5,19.5])cube([8,69,31], center=true);
 }
