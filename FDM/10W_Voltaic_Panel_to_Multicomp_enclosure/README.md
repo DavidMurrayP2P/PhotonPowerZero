@@ -1,12 +1,18 @@
 # 10W Voltaic Solar Panel to MULTICOMP PRO MC002194 enclosure
 
+This guide shows you how to build a 10W outdoor solar mount for your Raspberry Pi Zero and Photon Power Zero.
+
+![Alt text](../../img/Hero_shot.png?raw=true "Title")<p style="text-align:center; font-style:italic;">Finished construction
+
 This is a panel mount for Voltaic's 10W solar panel. These have been printed and tested using ABS, but other materials may work well too. ASA will almost certainly be as good. I also think that PETG will likely work, but this is untested. There is a [Bill of Materials (BOM)](#bill-of-materials-bom) which links to multiple sources, at the bottom of the page. All the files required for printing can be found here [10W Voltaic Panel to Multicomp enclosure](https://github.com/DavidMurrayP2P/PhotonPowerZero/tree/main/FDM/10W_Voltaic_Panel_to_Multicomp_enclosure).
 
 The image below shows the entire stet of printed parts but they must be printed in multiple parts. How many parts will depend on your printer size.
 
 ![Alt text](../../img/10W_voltaic_to_Multicomp_MC002194.png?raw=true "Title")<p style="text-align:center; font-style:italic;">Connect the 10W volatic Panel to the Mutlicomp MC002194 Enclosure and 25mm OD PVC Pipe. This is obviously printed in two parts. 
 
-The image above shows what the mount looks like but you can print it in two parts. This should be divided up for you already in the files pole_mount.stl and Panel_Mount_10W.stl
+The image above shows what the mount looks like
+![Alt text](../../img/Hero_shot.png?raw=true "Title")<p style="text-align:center; font-style:italic;">Finished construction
+ but you can print it in two parts. This should be divided up for you already in the files pole_mount.stl and Panel_Mount_10W.stl
 
 Most people will need to print the Panel_Mount_10W.stl in two parts: Panel_Mount_10W_1st_half.stl and Panel_Mount_10W_2nd_half.stl
 
