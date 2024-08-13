@@ -34,7 +34,7 @@ translate([-23.5,-6.5,19.5])cube([8,69,31], center=true);
     translate([-51,-10.5,12])rotate([0,90,0])   cylinder(h=5, r1=1.2, r2=1.2, center=true,$fn=24);
 
     //camera cutout
-    #translate([-52,0,16])cube([8,13,20], center=true);
+    translate([-52,0,16])cube([8,13,20], center=true);
     
     //Camera installation
     translate([-41,0,15])cube([20,32,30], center=true);
@@ -46,7 +46,7 @@ translate([-23.5,-6.5,19.5])cube([8,69,31], center=true);
      //battery cable routing
     translate([-34,-37,27])  cube([15,10,20], center=true);
     translate([-51.5,-38.7,9]) rotate([0,0,0])  cylinder(h=20, r1=2, r2=2, center=true,$fn=24);
-    #translate([-36,-38.5,0])  cube([35,1.7,5], center=true);
+    translate([-36,-38.5,0])  cube([35,1.7,5], center=true);
 
     translate([-46,-39.5,29])  cube([20,11.1,24], center=true);
    

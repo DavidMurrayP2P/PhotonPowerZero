@@ -28,9 +28,10 @@ You can then srcew the two parts together:
 
 ![Alt text](../../img/Mount_Pi_PPZ_inside_Multicomp_MC002194.png?raw=true "Title")<p style="text-align:center; font-style:italic;">Mount inside the Multicomp MC002194 Enclosure
 
-Note that you will need to use a 15mm drill bit to drill a hole for the PG-19 waterproof cable gland to fit through.
+![Alt text](../../img/15mm_drill.png?raw=true "Title")<p style="text-align:center; font-style:italic;">You need to drill a 15mm hole in the aluminium and use a Waterproof cable gland PG-9. Obviously you don't drill this hole on top of the solar pannel.
 
-![Alt text](../../img/case_mount_inside_Multicomp_MC002194.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">The case mount goes inside the multicomp. you need to drill a hole in the aluminium and use a Waterproof cable gland PG-9
+
+![Alt text](../../img/case_mount_inside_Multicomp_MC002194.jpg?raw=true "Title")<p style="text-align:center; font-style:italic;">The case mount goes inside the multicomp
 
 ![Alt text](../../img/Solar_wiring_1.png?raw=true "Title")<p style="text-align:center; font-style:italic;">Wiring the solar
 
