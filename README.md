@@ -4,10 +4,12 @@ The Photon Power Zero project aims to build an ecosystem of electronics, code, B
 
 You can find the user docs, showing you how to get started with the Photon Power Zero, and the design decisions around the board here:
 * [USERDOCS](USERDOCS.md) 
-* [DESIGN_AND_DECISIONS](DESIGN_AND_DECISIONS.md)
-* [LIPO_PURCHASING](LIPO_PURCHASING.md)
 * [6W SOLAR BUILD](FDM/6W_Voltaic_Panel_to_Multicomp_enclosure/README.md)
 * [10W SOLAR BUILD](FDM/10W_Voltaic_Panel_to_Multicomp_enclosure/README.md)
+* [REDUCING_ENERGY_CONSUMPTION](REDUCING_ENERGY_CONSUMPTION.md)
+* [DESIGN_AND_DECISIONS](DESIGN_AND_DECISIONS.md)
+* [LIPO_PURCHASING](LIPO_PURCHASING.md)
+
 
 ![Alt text](img/PhotonPowerZero.jpg?raw=true "Title") <p style="text-align:center; font-style:italic;">Photon Power Zero Board</p>
 

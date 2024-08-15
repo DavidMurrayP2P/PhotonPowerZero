@@ -80,12 +80,12 @@ dtparam=act_led_activelow=off
 
 ## Pi Zero 2W Disabling cores
 
-Although Jeff shows that you can decrease peak current by disabling cores, the idle power draw is the same for 1 and 4 cores on the raspberry Pi. This means that the idle power consumption is the same and even when under 100% load the total power consumption between 1 and 4 cores will be very similar. A single core will have a lower power draw but will draw power for a longer period of time. It's an interesting experiment but I would not reccomend: https://www.jeffgeerling.com/blog/2021/disabling-cores-reduce-pi-zero-2-ws-power-consumption-half
+Although Jeff shows that you can decrease peak current by disabling cores, the idle power draw is the same for 1 and 4 cores on the Raspberry Pi. Even when under 100% load the total power consumption between 1 and 4 cores will be very similar because although a single core will have a lower power draw but will draw power for a longer period of time. It's an interesting experiment but I would not reccomend: https://www.jeffgeerling.com/blog/2021/disabling-cores-reduce-pi-zero-2-ws-power-consumption-half
 
 ## Sources
 
   Raspberry Pi
   https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/power-supplies.adoc
   
-  Jeff Geerling
-Jeff Geerling also does a great job at on this page here: https://www.jeffgeerling.com/blogs/jeff-geerling/raspberry-pi-zero-power. Later Jeff shows that you can roughly half the Pi Zero 2 W power consumption by disabling cores. See: https://www.jeffgeerling.com/blog/2021/disabling-cores-reduce-pi-zero-2-ws-power-consumption-half
+
+Jeff Geerling also does a great job at on this page here: https://www.jeffgeerling.com/blogs/jeff-geerling/raspberry-pi-zero-power.
