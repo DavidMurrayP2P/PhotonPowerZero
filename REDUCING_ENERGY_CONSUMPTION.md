@@ -8,7 +8,7 @@ Out of the box, the consumption numbers are:
 
 | **Device**                 | **State**         | **Current (A)** | **Voltage (V)** | **Power (W)** |
 |----------------------------|-------------------|-----------------|-----------------|---------------|
-| Raspberry Pi Zero W        | 0% CPU load       | 0.08            | 5.1             | 0.459         |
+| Raspberry Pi Zero W        | 0% CPU load       | 0.09            | 5.1             | 0.459         |
 | Raspberry Pi Zero W        | 100% CPU load     | 0.16            | 5.1             | 0.816         |
 | Raspberry Pi Zero W        | Shutdown          | 0.0378          | 5.1             | 0.192         |
 | Raspberry Pi Zero 2 W      | 0% CPU load       | 0.12  | 5.1 | 0.612         |
@@ -21,7 +21,7 @@ Adding the following will increase power consumption:
 
 | **Device/Action**                             | **State/Action**                                        | **Current Increase (A)** |
 |-----------------------------------------------|---------------------------------------------------------|--------------------------|
-| Apple 100 Mbit USB2 adaptor                   | Increase                                                | 0.08 to 0.27             |
+| Apple 100 Mbit USB2 adaptor                   | Increase                                                | 0.09 to 0.27             |
 | Vantec 1000 Mbit USB3 Gigabit adaptor         | Increase                                                | 0.08 to 0.21             |
 | RAK2245 LoRaWAN Concentrator                  | Increase                                                | 0.08 to 0.44             |
 | SSH'd in over WiFi on the terminal            | Increase                                                | 0.08 to 0.1              |
@@ -38,16 +38,11 @@ Adding the following will increase power consumption:
 | Disabling the On and activity LEDs          | 0.002                            |
 
 ### Disable HDMI
-If you don't need the screen, you can save 25mA by disabling HDMI. Run:
-
+If you don't need the screen, you can save 25mA by disabling HDMI. Put the following in /boot/firmwar/config.txt:
 ```
-/usr/bin/tvservice -o 
-```
-
-You can put this in /etc/rc.local to make it permanent
-
-```
- /usr/bin/tvservice -o 
+hdmi_blanking=1
+hdmi_force_hotplug=0
+hdmi_ignore_hotplug=1
  ```
  
  ### Disable WiFi
