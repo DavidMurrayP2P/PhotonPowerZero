@@ -6,7 +6,7 @@ The purpose of this page is to document the different Wireless interface options
 
  - [Design Criteria](#design-criteria)
  - [The SIM7600X 4G HAT](#the-sim7600x-4g-hat)
- - [NRF24L01+](#NRF24L01+)
+ - [NRF24](#NRF24)
 
 ## Design Criteria
 
@@ -61,6 +61,6 @@ This is the power consumption when lightly loaded.
 
 Note that this is just a lot higher than we would ideally like to see. 
 
-### NRF24L01+
+### NRF24
 
 The NRF24L01+ is amazingly cheap on places like AliExpress and seems like a great option. 
