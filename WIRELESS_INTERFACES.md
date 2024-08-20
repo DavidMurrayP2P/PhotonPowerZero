@@ -1,11 +1,12 @@
 # WIRELESS INTERFACE OPTIONs
 
-The point of this page is to document the different Wireless interface options that are avaliable on the raspberry pi, past the inbuilt WiFi and Bluetooth. 
+The purpose of this page is to document the different Wireless interface options that are avaliable on the raspberry pi, past the inbuilt WiFi and Bluetooth. 
 
 # Table of Contents
 
  - [Design Criteria](#design-criteria)
  - [The SIM7600X 4G HAT](#the-sim7600x-4g-hat)
+ - [NRF24L01+](#NRF24L01+)
 
 ## Design Criteria
 
@@ -59,3 +60,7 @@ This is the power consumption when lightly loaded.
 ![Alt text](img/Wireless_Interfaces/SIM7600_load.png?raw=true "Title") <p style="text-align:center; font-style:italic;">Raspberry Pi Zero Rough Idle power conspmption </p
 
 Note that this is just a lot higher than we would ideally like to see. 
+
+### NRF24L01+
+
+The NRF24L01+ is amazingly cheap on places like AliExpress and seems like a great option. 
