@@ -37,6 +37,18 @@ The goal of this is to provide you with the information you might need if you ar
 ### RAK2245
 ##### Pi HAT 8 Channel LoRaWAN module SX1301
 
+I ran a Chiprstack Gatway in hot conditions for many years. I powered this device you can see below with a cheap Ali Express style PoE to usb power plug. 
+
+This is the power consumption after booting:
+
+![Alt text](img/Wireless_Interfaces/RAK2245.png?raw=true "Title") <p style="text-align:center; font-style:italic;">The Raspberry Pi Zero is underneath this RAK2224 concentrator.
+
+This RAK2245 worked very well for long periods of time using the Chirpstack Gateway software. You can check out the latest versions here: https://www.chirpstack.io/docs/chirpstack-gateway-bridge/install/raspberry-pi.html This is a concentrator and will act as a LoRaWAN gateway for your deployment of LoRa devices. 
+
+I genuinely had success with this device but when using this device I wal powering it through A PoE to USB plug similar to this: https://www.aliexpress.com/item/33035428356.html
+
+This is a reasonable option for those wanting a Pi and a LoRaWAN gateway but the power draw is too high for solar and battery with the Photon Power Zero.
+
 ### The SIM7600X 4G HAT
 
 The SIM7600X 4G HAT.
