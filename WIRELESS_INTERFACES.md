@@ -23,7 +23,7 @@ The following is an attempt to evaluate what is currently out there on the marke
  - RFM69HCW
  - SIM7020E NB-IoT
  - SIMCOM A7670SA LTE Cat1 Module
- - RAK2245 Pi HAT 8 Channel LoRaWAN module SX1301
+ - [RAK2245](#RAK2245) - Pi HAT 8 Channel LoRaWAN module SX1301
  - [NRF24](#NRF24)
 
 ## Design Criteria
@@ -33,6 +33,9 @@ The goal of this is to provide you with the information you might need if you ar
 
 ![Alt text](img/Wireless_Interfaces/Pi_Control.png?raw=true "Title") <p style="text-align:center; font-style:italic;">Raspberry Pi Zero Rough Idle power conspmption </p>
 
+
+### RAK2245
+##### Pi HAT 8 Channel LoRaWAN module SX1301
 
 ### The SIM7600X 4G HAT
 
