@@ -110,7 +110,9 @@ Note that this is just a lot higher than we would ideally like to see.
 
 ### RAK811
 
-test test test
+These LoRa end device modules work very well. I have had over 4km of reliable  transmit range using these. They do not consume excessive power and they were relatively cheap to buy. These seemed to be well designed and I could move binary data over these modules. The issue is that they are limited in speed by bothe technology, the LoRa standard operates down to vely impressive sensitiviy limits. Furthermore, they are also limited by regulation and in many parts of the world, these devices suffer from duty cycle limits. 
+
+While adhereing to Australian limits, we have slowly moved heavily compressed images over these devices, it's not possible in most parts of the world and these will not be faste enough for a real network inteface in Linux, one of the original goals.
 
 ![Alt text](img/Wireless_Interfaces/RAK811_pHAT.png?raw=true "Title") <p style="text-align:center; font-style:italic;">Raspberry Pi Zero Rough Idle power conspmption </p>
 
