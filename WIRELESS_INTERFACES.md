@@ -24,6 +24,7 @@ The following is an attempt to evaluate what is currently out there on the marke
  - [SIMCOM-7020E](#SIMCOM-7020E) NB-IoT
  - [SIMCOM-A7670SA](#SIMCOM-A7670SA) LTE Cat1 Module
  - [RAK2245](#RAK2245) - Pi HAT 8 Channel LoRaWAN module SX1301
+ - [RAK811](#RAK811) LoRaWan End Device
  - [NRF24](#NRF24)
 
 ## Design Criteria
@@ -36,7 +37,15 @@ The goal of this is to provide you with the information you might need if you ar
 ### SIMCOM-A7670SA 
 ##### LTE Cat1 Module
 
+I was excited to try this device because it was sold as supporting LTE Cat 1, but this did not recognise a regular sim. I will keep investigating this module but an initial look did not seem promising. This also only supported serial communications.
+
+![Alt text](img/Wireless_Interfaces/SIMA7670SA.png?raw=true "Title") <p style="text-align:center; font-style:italic;">The power consumption of the SIMCOM-A7670SA </p>
+
 ### SIMCOM-7020E
+
+This looked exceptionally convenient as the form factor was already Raspberry Pi Zero sided and the headers matched up, eliminating any wiring. I had hoped that this might just work with regular sim card but unfortuately this needs an NB-IoT specialised sim card.
+
+![Alt text](img/Wireless_Interfaces/SIM7020XNB-IoT.png?raw=true "Title") <p style="text-align:center; font-style:italic;">The power consumption of the SIMCOM-7020E</p>
 
 ### RAK2245
 ##### Pi HAT 8 Channel LoRaWAN module SX1301
@@ -55,7 +64,7 @@ This is a reasonable option for those wanting a Pi and a LoRaWAN gateway but the
 
 ### The SIM7600X 4G HAT
 
-The SIM7600X 4G HAT.
+The SIM7600X 4G HAT is a great fit for the Pi. The form factor is great. It appears to work over USB, using spring pins to hit VCC, GND, D+ and D-. You can see the idle power consumption as well as the power consumption under load below. This is a very good module however the price as well as the power consumption are both highert than I would like to see.
 
 Here is the idle power consumption:
 
@@ -98,6 +107,12 @@ This is the power consumption when lightly loaded.
 ![Alt text](img/Wireless_Interfaces/SIM7600_load.png?raw=true "Title") <p style="text-align:center; font-style:italic;">Raspberry Pi Zero Rough Idle power conspmption </p>
 
 Note that this is just a lot higher than we would ideally like to see. 
+
+### RAK811
+
+test test test
+
+![Alt text](img/Wireless_Interfaces/RAK811_pHAT.png?raw=true "Title") <p style="text-align:center; font-style:italic;">Raspberry Pi Zero Rough Idle power conspmption </p>
 
 ### NRF24
 
