@@ -1,4 +1,4 @@
-# WIRELESS INTERFACE OPTIONs
+# WIRELESS INTERFACE OPTIONS
 
 The purpose of this page is to document the different Wireless interface options that are avaliable on the raspberry pi, past the inbuilt WiFi and Bluetooth. 
 
@@ -13,54 +13,28 @@ Finally, the solution should cost under 40USD. This is not a hard requirement, i
 Speeds should be in the 50-200Kb/s range. The goal is not to stream live video, but we should be at least able to move a 350KB image within 60 seconds. So 350KB is 2800 bytes. If the link supports 50Kb/s then 2800/50 = 56 seconds.
 
 The following is an attempt to evaluate what is currently out there on the market.
- 
-
-
-# Table of Contents
-
- - [Design Criteria](#design-criteria)
- - [The SIM7600X 4G HAT](#the-sim7600x-4g-hat)
- - RFM69HCW
- - [SIMCOM-7020E](#SIMCOM-7020E) NB-IoT
- - [SIMCOM-A7670SA](#SIMCOM-A7670SA) LTE Cat1 Module
- - [RAK2245](#RAK2245) - Pi HAT 8 Channel LoRaWAN module SX1301
- - [RAK811](#RAK811) LoRaWan End Device
- - [NRF24](#NRF24)
 
 ## Design Criteria
 
 The goal of this is to provide you with the information you might need if you are deploying a low power solar powered Rasberry Pi Zero. As you can see below, the Raspberry Pi Zero runs at 5V and 0.1 amps which is 0.5W when idle. The design criteria is to stay under 0.2 Amps when Idle and under 0.25 amps when transmitting data. These are my goals for heat and battery life reasons. Be aware that in the [Reducing Energy Consumption](REDUCING_ENERGY_CONSUMPTION.md) document, the power consumption of the Pi Zero 2W was about 25% higher at idle speeds. These are very much ballpark numbers however.
 
+# Options
 
-![Alt text](img/Wireless_Interfaces/Pi_Control.png?raw=true "Title") <p style="text-align:center; font-style:italic;">Raspberry Pi Zero Rough Idle power conspmption </p>
+ - [Cellular Options](#Cellular-Options)
+	- [The SIM7600X 4G HAT](#the-sim7600x-4g-hat)
+    - [SIMCOM-7020E](#SIMCOM-7020E) NB-IoT
+    - [SIMCOM-A7670SA](#SIMCOM-A7670SA) LTE Cat1 Module
 
-### SIMCOM-A7670SA 
-##### LTE Cat1 Module
+ - [LoRaWAN options](#LoRaWAN-Options)
+   - [RAK2245](#RAK2245) - Pi HAT 8 Channel LoRaWAN module SX1301
+   - [RAK811](#RAK811) LoRaWan End Device
 
-I was excited to try this device because it was sold as supporting LTE Cat 1, but this did not recognise a regular sim. I will keep investigating this module but an initial look did not seem promising. This also only supported serial communications.
+ - [Other Options](#Other-Options)
+    - [NRF24](#NRF24)
+    - [RFM69HCW](#RFM69HCW)
+  
 
-![Alt text](img/Wireless_Interfaces/SIMA7670SA.png?raw=true "Title") <p style="text-align:center; font-style:italic;">The power consumption of the SIMCOM-A7670SA </p>
-
-### SIMCOM-7020E
-
-This looked exceptionally convenient as the form factor was already Raspberry Pi Zero sided and the headers matched up, eliminating any wiring. I had hoped that this might just work with regular sim card but unfortuately this needs an NB-IoT specialised sim card.
-
-![Alt text](img/Wireless_Interfaces/SIM7020XNB-IoT.png?raw=true "Title") <p style="text-align:center; font-style:italic;">The power consumption of the SIMCOM-7020E</p>
-
-### RAK2245
-##### Pi HAT 8 Channel LoRaWAN module SX1301
-
-I ran a Chiprstack Gatway in hot conditions for many years. I powered this device you can see below with a cheap Ali Express style PoE to usb power plug. 
-
-This is the power consumption after booting:
-
-![Alt text](img/Wireless_Interfaces/RAK2245.png?raw=true "Title") <p style="text-align:center; font-style:italic;">The Raspberry Pi Zero is underneath this RAK2224 concentrator.
-
-This RAK2245 worked very well for long periods of time using the Chirpstack Gateway software. You can check out the latest versions here: https://www.chirpstack.io/docs/chirpstack-gateway-bridge/install/raspberry-pi.html This is a concentrator and will act as a LoRaWAN gateway for your deployment of LoRa devices. 
-
-I genuinely had success with this device but when using this device I wal powering it through A PoE to USB plug similar to this: https://www.aliexpress.com/item/33035428356.html
-
-This is a reasonable option for those wanting a Pi and a LoRaWAN gateway but the power draw is too high for solar and battery with the Photon Power Zero.
+## Cellular Options
 
 ### The SIM7600X 4G HAT
 
@@ -108,6 +82,71 @@ This is the power consumption when lightly loaded.
 
 Note that this is just a lot higher than we would ideally like to see. 
 
+
+![Alt text](img/Wireless_Interfaces/Pi_Control.png?raw=true "Title") <p style="text-align:center; font-style:italic;">Raspberry Pi Zero Rough Idle power conspmption </p>
+
+### SIMCOM-7020E
+
+This looked exceptionally convenient as the form factor was already Raspberry Pi Zero sided and the headers matched up, eliminating any wiring. I had hoped that this might just work with regular sim card but unfortuately this needs an NB-IoT specialised sim card.
+
+![Alt text](img/Wireless_Interfaces/SIM7020XNB-IoT.png?raw=true "Title") <p style="text-align:center; font-style:italic;">The power consumption of the SIMCOM-7020E</p>
+
+### SIMCOM-A7670SA 
+##### LTE Cat1 Module
+
+I was excited to try this device because it was sold as supporting LTE Cat 1, but this did not recognise a regular sim. I will keep investigating this module but an initial look did not seem promising. This also only supported serial communications.
+
+This did not work with my regular cheap phone sim.
+
+Setup is pretty simple
+
+```sudo raspi-config```
+
+Navigate to Interfacing Options -> Serial. When prompted, select No to disable the serial console, then select Yes to enable the serial port hardware.
+
+```sudo apt install minicom```
+
+On the serial, try a:
+
+```AT```
+
+Then test if a SIM card has been inserted and detected:
+
+```AT+CPIN?```
+
+This will confirm that the modem is responding. Then: 
+
+```AT+CGDCONT=1,"IP","<your-apn>"```
+
+Enable the network connection:
+
+```AT+CIICR```
+
+Get the IP address assigned to the module:
+
+```AT+CIFSR```
+
+![Alt text](img/Wireless_Interfaces/SIMA7670SA.png?raw=true "Title") <p style="text-align:center; font-style:italic;">The power consumption of the SIMCOM-A7670SA </p>
+
+## LoRaWAN Options
+
+### RAK2245
+##### Pi HAT 8 Channel LoRaWAN module SX1301
+
+I ran a Chiprstack Gatway in hot conditions for many years. I powered this device you can see below with a cheap Ali Express style PoE to usb power plug. 
+
+This is the power consumption after booting:
+
+![Alt text](img/Wireless_Interfaces/RAK2245.png?raw=true "Title") <p style="text-align:center; font-style:italic;">The Raspberry Pi Zero is underneath this RAK2224 concentrator.
+
+This RAK2245 worked very well for long periods of time using the Chirpstack Gateway software. You can check out the latest versions here: https://www.chirpstack.io/docs/chirpstack-gateway-bridge/install/raspberry-pi.html This is a concentrator and will act as a LoRaWAN gateway for your deployment of LoRa devices. 
+
+I genuinely had success with this device but when using this device I wal powering it through A PoE to USB plug similar to this: https://www.aliexpress.com/item/33035428356.html
+
+This is a reasonable option for those wanting a Pi and a LoRaWAN gateway but the power draw is too high for solar and battery with the Photon Power Zero.
+
+
+
 ### RAK811
 
 These LoRa end device modules work very well. I have had over 4km of reliable  transmit range using these. They do not consume excessive power and they were relatively cheap to buy. These seemed to be well designed and I could move binary data over these modules. The issue is that they are limited in speed by bothe technology, the LoRa standard operates down to vely impressive sensitiviy limits. Furthermore, they are also limited by regulation and in many parts of the world, these devices suffer from duty cycle limits. 
@@ -115,6 +154,8 @@ These LoRa end device modules work very well. I have had over 4km of reliable  t
 While adhereing to Australian limits, we have slowly moved heavily compressed images over these devices, it's not possible in most parts of the world and these will not be faste enough for a real network inteface in Linux, one of the original goals.
 
 ![Alt text](img/Wireless_Interfaces/RAK811_pHAT.png?raw=true "Title") <p style="text-align:center; font-style:italic;">Raspberry Pi Zero Rough Idle power conspmption </p>
+
+## Other Options
 
 ### NRF24
 
@@ -248,3 +289,7 @@ if __name__ == "__main__":
 ![Alt text](img/Wireless_Interfaces/nrf_load.png?raw=true "Title") <p style="text-align:center; font-style:italic;">NRF24 module transmitting</p>
 
 Overall this module is very cheap and low power. There are however, a few issues. Firstly it uses the 2.4GHz band, which is also used by the WiFi Module so there will potentially be some inteference issues using both at the same time in nearby proximiyt.. Secondly, the trasmission difference is not dissimilar from the onboard WiFi. There is no evidence that we it will be possible to reach the a 1km distance. Finally, on the raspberry Pi, it does not enumerate as a network interface. While it might be possible to create a driver that might create a 6LowPAN style interface on the Pi, the  nRF24L01+ only supports payload sizes up to 32 bytes. To make something that can reach a minimum efficiency requirement, the minimum fram size should be 127 octets. This is what 802.15.4 allows.
+
+## RFM69HCW
+
+test test test.
