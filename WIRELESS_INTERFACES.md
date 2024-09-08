@@ -294,4 +294,231 @@ Overall this module is very cheap and low power. There are however, a few issues
 
 ## RFM69HCW
 
-test test test.
+This module is currently being tested. 
+
+You need to ensure thta you have enabled SPI in the raspberry pi
+
+```sudo raspi-config```
+
+Got to intereface options -> Enable SPI
+
+Here is some sample code to test the RFM69HCW after it has been wired:
+
+```
+import spidev
+import RPi.GPIO as GPIO
+import time
+
+# GPIO pin for RFM69's DIO0 (Interrupt)
+RFM69_DIO0 = 17
+
+# SPI setup
+spi = spidev.SpiDev()
+spi.open(0, 0)  # SPI bus 0, chip select 0
+spi.max_speed_hz = 5000000
+
+# GPIO setup
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(RFM69_DIO0, GPIO.IN)
+
+def reset_gpio_pins():
+    # Reset any GPIO pins used in the program to a known state
+    GPIO.setup(RFM69_DIO0, GPIO.OUT, initial=GPIO.LOW)
+    time.sleep(0.1)
+    GPIO.setup(RFM69_DIO0, GPIO.IN)
+
+def read_register(register):
+    response = spi.xfer2([register & 0x7F, 0])
+    return response[1]
+
+def write_register(register, value):
+    spi.xfer2([register | 0x80, value])
+
+def initialize_rfm69():
+    # Example initialization sequence
+    write_register(0x01, 0x04)  # OpMode: Standby
+    write_register(0x02, 0x00)  # DataModul: Packet mode, FSK
+    write_register(0x03, 0x02)  # Bitrate: 4.8 kbps
+    write_register(0x04, 0x8A)
+    write_register(0x05, 0x01)  # Fdev: 5 kHz
+    write_register(0x06, 0xC3)
+    write_register(0x19, 0x42)  # RxBw: 10 kHz
+    write_register(0x29, 0xA0)  # RssiThresh: -80 dB
+    write_register(0x2E, 0x90)  # SyncConfig: Sync on, sync size = 3
+    write_register(0x2F, 0x2D)  # SyncValue1: 0x2D (Sync Word)
+    write_register(0x37, 0x90)  # PacketConfig1: Variable length, Manchester encoding
+    write_register(0x38, 0x40)  # PayloadLength: 64 bytes
+    write_register(0x3C, 0x8F)  # FifoTresh: TxStart on FifoNotEmpty, FifoLevel = 15
+    write_register(0x3D, 0x12)  # PacketConfig2: InterPacketRxDelay = 1 bit, RestartRx off
+    write_register(0x6F, 0x30)  # TestDagc: Improved margin, use if AfcLowBetaOn=0
+
+def send_packet(data):
+    write_register(0x01, 0x0C)  # OpMode: Transmit
+    write_register(0x00, 0x80 | len(data))  # Fifo and length
+    for byte in data:
+        write_register(0x00, byte)
+    while not GPIO.input(RFM69_DIO0):  # Wait for DIO0 to go high
+        time.sleep(0.01)
+    write_register(0x01, 0x04)  # OpMode: Standby
+
+def check_rfm69():
+    try:
+        # Print the content of some key registers
+        print("Register 0x01 (OpMode):", hex(read_register(0x01)))
+        print("Register 0x02 (DataModul):", hex(read_register(0x02)))
+        print("Register 0x03 (BitrateMsb):", hex(read_register(0x03)))
+        print("Register 0x04 (BitrateLsb):", hex(read_register(0x04)))
+        print("Register 0x05 (FdevMsb):", hex(read_register(0x05)))
+        print("Register 0x06 (FdevLsb):", hex(read_register(0x06)))
+        print("Register 0x19 (RxBw):", hex(read_register(0x19)))
+        print("Register 0x29 (RssiThresh):", hex(read_register(0x29)))
+        print("Register 0x2E (SyncConfig):", hex(read_register(0x2E)))
+        print("Register 0x2F (SyncValue1):", hex(read_register(0x2F)))
+        print("Register 0x37 (PacketConfig1):", hex(read_register(0x37)))
+        print("Register 0x38 (PayloadLength):", hex(read_register(0x38)))
+        print("Register 0x3C (FifoTresh):", hex(read_register(0x3C)))
+        print("Register 0x3D (PacketConfig2):", hex(read_register(0x3D)))
+        print("Register 0x6F (TestDagc):", hex(read_register(0x6F)))
+        print("Register 0x10 (Version):", hex(read_register(0x10)))  # Version register to verify communication
+    except Exception as e:
+        print(f"Error reading registers: {e}")
+
+def main():
+    try:
+        reset_gpio_pins()
+        initialize_rfm69()
+        print("RFM69 initialized.")
+        
+        # Check RFM69 registers
+        check_rfm69()
+
+        # Example: Send a packet
+        message = "Hello, RFM69"
+        send_packet([ord(c) for c in message])
+        print("Packet sent.")
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+    finally:
+        reset_gpio_pins()
+        spi.close()
+        GPIO.cleanup()
+
+if __name__ == "__main__":
+    main()
+```
+
+
+Here is some sample code to recieve the message on another radio
+
+```
+import spidev
+import RPi.GPIO as GPIO
+import time
+
+# GPIO pin for RFM69's DIO0 (Interrupt)
+RFM69_DIO0 = 17
+
+# SPI setup
+spi = spidev.SpiDev()
+spi.open(0, 0)  # SPI bus 0, chip select 0
+spi.max_speed_hz = 5000000
+
+# GPIO setup
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(RFM69_DIO0, GPIO.IN)
+
+def reset_gpio_pins():
+    # Reset any GPIO pins used in the program to a known state
+    GPIO.setup(RFM69_DIO0, GPIO.OUT, initial=GPIO.LOW)
+    time.sleep(0.1)
+    GPIO.setup(RFM69_DIO0, GPIO.IN)
+
+def read_register(register):
+    response = spi.xfer2([register & 0x7F, 0])
+    return response[1]
+
+def write_register(register, value):
+    spi.xfer2([register | 0x80, value])
+
+def initialize_rfm69():
+    # Example initialization sequence
+    write_register(0x01, 0x04)  # OpMode: Standby
+    write_register(0x02, 0x00)  # DataModul: Packet mode, FSK
+    write_register(0x03, 0x02)  # Bitrate: 4.8 kbps
+    write_register(0x04, 0x8A)
+    write_register(0x05, 0x01)  # Fdev: 5 kHz
+    write_register(0x06, 0xC3)
+    write_register(0x19, 0x42)  # RxBw: 10 kHz
+    write_register(0x29, 0xA0)  # RssiThresh: -80 dB
+    write_register(0x2E, 0x90)  # SyncConfig: Sync on, sync size = 3
+    write_register(0x2F, 0x2D)  # SyncValue1: 0x2D (Sync Word)
+    write_register(0x37, 0x90)  # PacketConfig1: Variable length, Manchester encoding
+    write_register(0x38, 0x40)  # PayloadLength: 64 bytes
+    write_register(0x3C, 0x8F)  # FifoTresh: TxStart on FifoNotEmpty, FifoLevel = 15
+    write_register(0x3D, 0x12)  # PacketConfig2: InterPacketRxDelay = 1 bit, RestartRx off
+    write_register(0x6F, 0x30)  # TestDagc: Improved margin, use if AfcLowBetaOn=0
+
+def receive_packet():
+    write_register(0x01, 0x10)  # OpMode: Receive Mode
+    print("Waiting for a packet...")
+
+    while not GPIO.input(RFM69_DIO0):  # Wait for DIO0 to go high (PayloadReady)
+        time.sleep(0.01)
+    
+    length = read_register(0x00)  # First byte is the length of the packet
+    packet = []
+    for i in range(length):
+        packet.append(read_register(0x00))
+    
+    write_register(0x01, 0x04)  # OpMode: Standby
+    
+    return packet
+
+def check_rfm69():
+    try:
+        # Print the content of some key registers
+        print("Register 0x01 (OpMode):", hex(read_register(0x01)))
+        print("Register 0x02 (DataModul):", hex(read_register(0x02)))
+        print("Register 0x03 (BitrateMsb):", hex(read_register(0x03)))
+        print("Register 0x04 (BitrateLsb):", hex(read_register(0x04)))
+        print("Register 0x05 (FdevMsb):", hex(read_register(0x05)))
+        print("Register 0x06 (FdevLsb):", hex(read_register(0x06)))
+        print("Register 0x19 (RxBw):", hex(read_register(0x19)))
+        print("Register 0x29 (RssiThresh):", hex(read_register(0x29)))
+        print("Register 0x2E (SyncConfig):", hex(read_register(0x2E)))
+        print("Register 0x2F (SyncValue1):", hex(read_register(0x2F)))
+        print("Register 0x37 (PacketConfig1):", hex(read_register(0x37)))
+        print("Register 0x38 (PayloadLength):", hex(read_register(0x38)))
+        print("Register 0x3C (FifoTresh):", hex(read_register(0x3C)))
+        print("Register 0x3D (PacketConfig2):", hex(read_register(0x3D)))
+        print("Register 0x6F (TestDagc):", hex(read_register(0x6F)))
+        print("Register 0x10 (Version):", hex(read_register(0x10)))  # Version register to verify communication
+    except Exception as e:
+        print(f"Error reading registers: {e}")
+
+def main():
+    try:
+        reset_gpio_pins()
+        initialize_rfm69()
+        print("RFM69 initialized.")
+        
+        # Check RFM69 registers
+        check_rfm69()
+
+        # Example: Receive a packet
+        packet = receive_packet()
+        print("Packet received: ", ''.join(chr(byte) for byte in packet))
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+    finally:
+        reset_gpio_pins()
+        spi.close()
+        GPIO.cleanup()
+
+if __name__ == "__main__":
+    main()
+```
