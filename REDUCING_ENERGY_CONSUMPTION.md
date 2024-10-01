@@ -1,7 +1,6 @@
 # Reducing Energy Consumption on the Pi Zero and Pi Zero 2W
 
-The followingy are my observations from testing the Raspberry Pi Zero's power consumption. Raspberry Pi's docs on this can be found here:  
-
+The followingy are my observations and notes from testing the Raspberry Pi Zero's power consumption. See below for different methods to reduce power consumption.
 
 Summary
 Out of the box, the consumption numbers are:
