@@ -40,10 +40,13 @@ Adding the following will increase power consumption:
 ### Disable HDMI
 If you don't need the screen, you can save 25mA by disabling HDMI. Put the following in /boot/firmwar/config.txt:
 ```
-hdmi_blanking=1
-hdmi_force_hotplug=0
-hdmi_ignore_hotplug=1
- ```
+dtoverlay=vc4-kms-v3d,nohdmi
+max_framebuffers=1
+disable_fw_kms_setup=1
+disable_overscan=1
+
+enable_tvout=0
+```
  
  ### Disable WiFi
 
@@ -81,6 +84,7 @@ Although Jeff shows that you can decrease peak current by disabling cores, the i
 
   Raspberry Pi
   https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/power-supplies.adoc
-  
+ 
+https://kittenlabs.de/blog/2024/09/01/extreme-pi-boot-optimization/ 
 
 Jeff Geerling also does a great job at on this page here: https://www.jeffgeerling.com/blogs/jeff-geerling/raspberry-pi-zero-power.
