@@ -5,12 +5,12 @@
       "Application": "Pcbnew",
       "Version": "8.0.6"
     },
-    "CreationDate": "2024-10-20T18:51:53+08:00"
+    "CreationDate": "2024-11-17T19:32:38+08:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
-      "Name": "RFM69HCW_v5",
-      "GUID": "52464d36-3948-4435-975f-76352e6b6963",
+      "Name": "RFM69HCW_v6",
+      "GUID": "52464d36-3948-4435-975f-76362e6b6963",
       "Revision": "rev?"
     },
     "Size": {
@@ -43,57 +43,57 @@
   ],
   "FilesAttributes": [
     {
-      "Path": "RFM69HCW_v5-F_Cu.gbr",
+      "Path": "RFM69HCW_v6-F_Cu.gbr",
       "FileFunction": "Copper,L1,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "RFM69HCW_v5-In1_Cu.gbr",
+      "Path": "RFM69HCW_v6-In1_Cu.gbr",
       "FileFunction": "Copper,L2,Inr",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "RFM69HCW_v5-In2_Cu.gbr",
+      "Path": "RFM69HCW_v6-In2_Cu.gbr",
       "FileFunction": "Copper,L3,Inr",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "RFM69HCW_v5-B_Cu.gbr",
+      "Path": "RFM69HCW_v6-B_Cu.gbr",
       "FileFunction": "Copper,L4,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "RFM69HCW_v5-F_Paste.gbr",
+      "Path": "RFM69HCW_v6-F_Paste.gbr",
       "FileFunction": "SolderPaste,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "RFM69HCW_v5-B_Paste.gbr",
+      "Path": "RFM69HCW_v6-B_Paste.gbr",
       "FileFunction": "SolderPaste,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "RFM69HCW_v5-F_Silkscreen.gbr",
+      "Path": "RFM69HCW_v6-F_Silkscreen.gbr",
       "FileFunction": "Legend,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "RFM69HCW_v5-B_Silkscreen.gbr",
+      "Path": "RFM69HCW_v6-B_Silkscreen.gbr",
       "FileFunction": "Legend,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "RFM69HCW_v5-F_Mask.gbr",
+      "Path": "RFM69HCW_v6-F_Mask.gbr",
       "FileFunction": "SolderMask,Top",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "RFM69HCW_v5-B_Mask.gbr",
+      "Path": "RFM69HCW_v6-B_Mask.gbr",
       "FileFunction": "SolderMask,Bot",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "RFM69HCW_v5-Edge_Cuts.gbr",
+      "Path": "RFM69HCW_v6-Edge_Cuts.gbr",
       "FileFunction": "Profile",
       "FilePolarity": "Positive"
     }

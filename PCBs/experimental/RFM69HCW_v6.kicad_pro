@@ -255,7 +255,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "../../RFM69HCW/",
+      "plot": "gerbers/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
