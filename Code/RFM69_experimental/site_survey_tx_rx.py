@@ -15,7 +15,7 @@ TOSLEEP = 0.01
 
 # Initialize the radio
 radio915 = RFM69.RFM69(RF69_915MHZ, NODE, NET, True)
-radio433 = RFM69.RFM69(RF69_413MHZ, NODE1, NET1, True)
+radio433 = RFM69.RFM69(RF69_433MHZ, NODE1, NET1, True)
 print("Class initialized")
 
 print("Reading all registers")
@@ -32,14 +32,14 @@ radio915.rcCalibration()
 radio433.rcCalibration()
 
 print("Setting high power")
-radio15.setHighPower(True)
+radio915.setHighPower(True)
 radio433.setHighPower(True)
 radio915.setPowerLevel(31)
 radio433.setPowerLevel(31)
 
 print("Checking temperature")
 print(radio915.readTemperature(0))
-print(radio413.readTemperature(0))
+print(radio433.readTemperature(0))
 
 radio915.setFrequency(915000000)
 radio433.setFrequency(433000000)
@@ -54,7 +54,7 @@ radio915.writeReg(REG_FDEVMSB, RF_FDEVMSB_50000)
 radio915.writeReg(REG_FDEVLSB, RF_FDEVLSB_50000)
 
 radio433.writeReg(REG_FDEVMSB, RF_FDEVMSB_50000)
-radio9433.writeReg(REG_FDEVLSB, RF_FDEVLSB_50000)
+radio433.writeReg(REG_FDEVLSB, RF_FDEVLSB_50000)
 
 print("Starting loop...")
 sequence = 0
