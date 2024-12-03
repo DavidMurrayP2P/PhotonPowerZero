@@ -14,8 +14,8 @@ TIMEOUT = 1
 TOSLEEP = 0.01
 
 # Initialize the radio
-radio915 = RFM69.RFM69(RF69_915MHZ, NODE, NET, True)
-radio433 = RFM69.RFM69(RF69_433MHZ, NODE1, NET1, True)
+radio915 = RFM69.RFM69(RF69_433MHZ, NODE, NET, True)
+radio433 = RFM69.RFM69(RF69_915MHZ, NODE1, NET1, True)
 print("Class initialized")
 
 print("Reading all registers")
@@ -60,18 +60,18 @@ print("Starting loop...")
 sequence = 0
 try:
     while True:
-        msg = "%d, %d, 915\n" % (NODE, sequence)
+        msg = "%d, %d, 433\n" % (NODE, sequence)
         sequence += 1
 
         print(f"TX >> {OTHERNODE}: {msg}")
-        radio915.send(OTHERNODE, msg)  # Send without retrying for ACK
+        radio433.send(OTHERNODE, msg)  # Send without retrying for ACK
         time.sleep(0.05)
 
         #print("Receiving...")
         #radio.receiveBegin()
         #timedOut = 0
         #while not radio.receiveDone():
-        #    timedOut += TOSLEEP
+       #    timedOut += TOSLEEP
         #    time.sleep(TOSLEEP)
         #    if timedOut > TIMEOUT:
         #        print("Nothing received")
