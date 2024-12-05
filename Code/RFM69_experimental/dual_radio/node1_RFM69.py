@@ -14,8 +14,8 @@ TIMEOUT = 1
 TOSLEEP = 0.01
 
 # Initialize the radio
-radio915 = RFM69.RFM69(RF69_433MHZ, NODE, NET, True)
-radio433 = RFM69.RFM69(RF69_915MHZ, NODE1, NET1, True)
+radio433 = RFM69.RFM69(RF69_433MHZ, NODE, NET, True)
+radio915 = RFM69.RFM69(RF69_915MHZ, NODE1, NET1, True)
 print("Class initialized")
 
 print("Reading all registers")
