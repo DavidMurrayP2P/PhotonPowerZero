@@ -13,16 +13,12 @@ NET1 = 11
 TIMEOUT = 1
 TOSLEEP = 0.01
 
-# Initialize the radio
-radio433 = RFM69.RFM69_433(RF69_433MHZ, NODE, NET, True)
 radio915 = RFM69.RFM69_915(RF69_915MHZ, NODE1, NET1, True)
-print("Class initialized")
-
-print("Reading all registers")
 results = radio915.readAllRegs()
 for result in results:
     print(result)
 
+radio433 = RFM69.RFM69_433(RF69_433MHZ, NODE, NET, True)
 results = radio433.readAllRegs()
 for result in results:
     print(result)
