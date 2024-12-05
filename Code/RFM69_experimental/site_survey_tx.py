@@ -12,7 +12,7 @@ TIMEOUT = 1
 TOSLEEP = 0.01
 
 # Initialize the radio
-radio = RFM69.RFM69(RF69_433MHZ, NODE, NET, True)
+radio = RFM69.RFM69(RF69_915MHZ, NODE, NET, True)
 print("Class initialized")
 
 print("Reading all registers")
@@ -30,7 +30,7 @@ radio.setPowerLevel(31)
 print("Checking temperature")
 print(radio.readTemperature(0))
 
-radio.setFrequency(433000000)
+radio.setFrequency(915000000)
 
 radio.writeReg(REG_BITRATEMSB, RF_BITRATEMSB_250000)
 radio.writeReg(REG_BITRATELSB, RF_BITRATELSB_250000)
@@ -79,7 +79,7 @@ if response == '1':
     sequence = 0
     try:
         while True:
-            msg = "%d, %d, 433\n" % (NODE, sequence)
+            msg = "%d, %d, 915\n" % (NODE, sequence)
             sequence += 1
 
             print(f"TX >> {OTHERNODE}: {msg}")
