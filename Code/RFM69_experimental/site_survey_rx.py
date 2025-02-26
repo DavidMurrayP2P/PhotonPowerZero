@@ -19,7 +19,18 @@ GPIO.setup(led, GPIO.OUT)
 GPIO.output(led, GPIO.LOW)
 
 # Initialize the radio
-radio = RFM69.RFM69(RF69_915MHZ, NODE, NET, True)
+#radio = RFM69.RFM69(RF69_915MHZ, NODE, NET, True)
+radio = RFM69.RFM69(
+    freqBand=RF69_915MHZ,  # Frequency band
+    nodeID=NODE,           # Node ID
+    networkID=NET,         # Network ID
+    isRFM69HW=True,        # High-power version flag
+    intPin=18,             # Custom interrupt pin
+    rstPin=22,             # Custom reset pin
+    spiBus=0,              # Custom SPI bus
+    spiDevice=1            # Custom SPI device
+)
+
 print("Class initialized")
 
 print("Reading all registers...")
