@@ -20,32 +20,41 @@ GPIO.output(led, GPIO.LOW)
 
 # Initialize the radio
 #radio = RFM69.RFM69(RF69_915MHZ, NODE, NET, True)
-radio = RFM69.RFM69(RF69, RF69_915MHZ, NODE, NET, True, 18, 22, 0, 0)
-#(self, freqBand, nodeID, networkID, isRFM69HW = False, intPin = 18, rstPin = 22, spiBus = 0, spiDevice = 0):
+radio915 = RFM69.RFM69(
+    freqBand=RF69_915MHZ,  # Frequency band
+    nodeID=NODE,           # Node ID
+    networkID=NET,         # Network ID
+    isRFM69HW=True,        # High-power version flag
+    intPin=18,             # Custom interrupt pin
+    rstPin=22,             # Custom reset pin
+    spiBus=0,              # Custom SPI bus
+    spiDevice=1            # Custom SPI device
+)
+
 print("Class initialized")
 
 print("Reading all registers...")
-results = radio.readAllRegs()
+results = radio915.readAllRegs()
 for result in results:
     print(result)
 
 print("Performing rcCalibration")
-radio.rcCalibration()
+radio915.rcCalibration()
 
 print("Setting high power")
-radio.setHighPower(True)
-radio.setPowerLevel(31)
+radio915.setHighPower(True)
+radio915.setPowerLevel(31)
 
 print("Checking temperature")
-print(radio.readTemperature(0))
+print(radio915.readTemperature(0))
 
-radio.setFrequency(915000000)
+radio915.setFrequency(915000000)
 
-radio.writeReg(REG_BITRATEMSB, RF_BITRATEMSB_250000)
-radio.writeReg(REG_BITRATELSB, RF_BITRATELSB_250000)
+radio915.writeReg(REG_BITRATEMSB, RF_BITRATEMSB_250000)
+radio915.writeReg(REG_BITRATELSB, RF_BITRATELSB_250000)
 
-radio.writeReg(REG_FDEVMSB, RF_FDEVMSB_50000)
-radio.writeReg(REG_FDEVLSB, RF_FDEVLSB_50000)
+radio915.writeReg(REG_FDEVMSB, RF_FDEVMSB_50000)
+radio915.writeReg(REG_FDEVLSB, RF_FDEVLSB_50000)
 
 # Clear the contents of the output file
 open(OUTPUT_FILE, 'w').close()
@@ -57,9 +66,9 @@ try:
         while True:
             GPIO.output(led, GPIO.LOW)
 
-            radio.receiveBegin()
+            radio915.receiveBegin()
             timedOut = 0
-            while not radio.receiveDone():
+            while not radio915.receiveDone():
                 time.sleep(TOSLEEP)
 
             if timedOut <= TIMEOUT:
@@ -70,11 +79,11 @@ try:
                 #print(f"RX << {sender}: (RSSI: {radio.RSSI})")
 
                 # Write the received data to the file
-                f.write(bytearray(radio.DATA))
+                f.write(bytearray(radio915.DATA))
                 f.flush()  # Ensure the data is written to disk immediately
 
                 # Process ACK if needed
-                ackReq = radio.ACKRequested()
+                ackReq = radio915.ACKRequested()
                 
                 #time.sleep(TIMEOUT / 2)
 
