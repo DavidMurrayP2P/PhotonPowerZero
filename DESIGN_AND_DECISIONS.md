@@ -19,3 +19,9 @@ There is also the problem of heat. Both electronics and batteries perform much b
 Yes and no. So, an NTC thermistor can be added. There is a recommendation in the [BQ2407](https://www.ti.com/lit/ds/symlink/bq24074.pdf) documentation. To use this, you must purchase a thermistor that fits into the JST connector. You would also need to desolder the nearby 10k resistor.
 
 By intentional design, the charge current for the battery is always limited to under 1 amp. Given the limited 1 amp charging speed over a 4400mAh battery, we have not found the use of a thermistor necessary, and we have months of testing over at 44C ambient temperature days. Any additional heat generated through charging is negligible compared to the ambient temperature.
+
+## Pins in use
+
+The diagrab below shows which of the Raspberry Pi Pins are used by the Photon Power zero.
+
+![Alt text](img/Pins_in_use_by_PPZ.png?raw=true "Title")<p style="text-align:center; font-style:italic;">These are the pins in use by the Photon Power Zero
