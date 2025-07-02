@@ -22,6 +22,6 @@ By intentional design, the charge current for the battery is always limited to u
 
 ## Pins in use
 
-The diagrab below shows which of the Raspberry Pi Pins are used by the Photon Power zero.
+The diagram below shows which of the Raspberry Pi Pins are used by the Photon Power Zero.
 
 ![Alt text](img/Pins_in_use_by_PPZ.png?raw=true "Title")<p style="text-align:center; font-style:italic;">These are the pins in use by the Photon Power Zero
