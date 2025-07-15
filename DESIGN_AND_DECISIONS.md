@@ -20,6 +20,10 @@ Yes and no. So, an NTC thermistor can be added. There is a recommendation in the
 
 By intentional design, the charge current for the battery is always limited to under 1 amp. Given the limited 1 amp charging speed over a 4400mAh battery, we have not found the use of a thermistor necessary, and we have months of testing over at 44C ambient temperature days. Any additional heat generated through charging is negligible compared to the ambient temperature.
 
+## Can I solder my own solar pannel leads to this board
+
+A revision 2 is underway to potentially allow this, however, I think that a lower risk approach is to use the cable provided with your board or to make use of an existing barrel jack cable and to join the leads on your solar pannel to an existing barrel jack cable. I think this is more likely to be successful for most people. Twist the wires, add a little solder to the joint and use some good quality heat shrink tubing.
+
 ## Pins in use
 
 The diagram below shows which of the Raspberry Pi Pins are used by the Photon Power Zero.
